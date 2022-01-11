@@ -1,0 +1,146 @@
+//Подключение файлов
+@import "nullify.scss";
+@import "mixins.scss";
+
+//Подключение шрифтов
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+$standardFont: "Noto Sans";
+
+//Цвета
+$mainBkgColor: rgb(255, 255, 255);
+$highlightColor: rgb(12, 125, 255);
+$mainFontColor: rgb(37, 64, 107);
+$divFiller: rgb(246, 250, 255);
+$borderColor: rgb(232, 242, 254);
+
+//Размеры
+$maxWidth: 1920px;
+$minWidth: 320px;
+$maxContentWidth: 1419px;
+
+//---------------------------
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: $maxContentWidth;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: $divFiller;
+  font-family: $standardFont;
+  color: $mainFontColor;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    &-address {
+      margin-left: auto;
+      margin-right: 60px;
+    }
+  }
+  &__icon {
+    @include icon($highlightColor, 12px, 20px, middle);
+  }
+}
+
+.menu {
+  height: 67px;
+  margin-top: 43px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: $standardFont;
+  &__dropdown {
+    &-icon {
+      @include icon(inherit, 10px, 7px, middle);
+      &_deployed {
+        display: none;
+      }
+    }
+    &:hover i.menu__dropdown-icon_deployed {
+      display: inline-block;
+    }
+    &:hover i.menu__dropdown-icon_minimized {
+      display: none;
+    }
+    &-wrapper {
+      //display: none;
+      position: absolute;
+      width: auto;
+    }
+    &-content {
+      display: grid;
+      margin-top: 16px;
+      grid-template-columns: 1fr 1fr;
+      width: 716px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &-item {
+      padding: 16px 16px;
+      display: flex;
+      &-icon {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  &__navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &-number {
+      font-size: 20px;
+      color: $highlightColor;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      &:hover {
+        @include border(1px, solid, $borderColor, 8px);
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      & a {
+        color: $highlightColor;
+      }
+    }
+    &-link {
+      color: $mainFontColor;
+    }
+    &-link:hover {
+      cursor: pointer;
+      color: $highlightColor;
+    }
+    &-links {
+      margin: auto;
+      display: flex;
+      max-width: 500px;
+      width: 100%;
+      justify-content: space-around;
+    }
+    &-icon {
+      @include icon(inherit, 10px, 7px, middle);
+    }
+  }
+  &__icon {
+    @include icon($highlightColor, 15px, 20px, middle);
+  }
+
+}

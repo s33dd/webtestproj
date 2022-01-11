@@ -1,0 +1,11 @@
+@mixin icon($clr, $mrgn, $fz, $align) {
+  color: $clr;
+  margin-right: $mrgn;
+  font-size: $fz;
+  vertical-align: $align;
+}
+
+@mixin border($sz, $style, $clr, $rad) {
+  border: $sz $style $clr;
+  border-radius: $rad;
+}
