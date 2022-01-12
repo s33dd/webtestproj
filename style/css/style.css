@@ -121,6 +121,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   font-family: "Noto Sans";
 }
+.menu__dropdown {
+  position: relative;
+}
 .menu__dropdown-icon {
   color: inherit;
   margin-right: 10px;
@@ -130,6 +133,51 @@ h1, h2, h3, h4, h5, h6 {
 .menu__dropdown-icon_deployed {
   display: none;
 }
+.menu__dropdown-icon_chart {
+  color: #f5818c;
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
+  background-color: rgba(245, 129, 140, 0.1);
+}
+.menu__dropdown-icon_money {
+  color: #47d39b;
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
+  background-color: rgba(71, 211, 155, 0.1);
+}
+.menu__dropdown-icon_arrow {
+  color: #6f3cff;
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
+  background-color: rgba(111, 60, 255, 0.1);
+}
+.menu__dropdown-icon_question {
+  color: #ffa05c;
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
+  background-color: rgba(255, 160, 92, 0.1);
+}
+.menu__dropdown-icon_tablet {
+  color: #04d2fc;
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
+  background-color: rgba(4, 210, 252, 0.1);
+}
+.menu__dropdown-icon_check {
+  color: #0c7dff;
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
+  background-color: rgba(12, 125, 255, 0.1);
+}
+.menu__dropdown:hover .menu__dropdown-wrapper {
+  display: block;
+}
 .menu__dropdown:hover i.menu__dropdown-icon_deployed {
   display: inline-block;
 }
@@ -137,8 +185,20 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 .menu__dropdown-wrapper {
+  display: none;
   position: absolute;
   width: auto;
+  left: -360%;
+}
+.menu__dropdown-category {
+  width: 249px;
+}
+.menu__dropdown-category p {
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #66738f;
+  line-height: 18px;
 }
 .menu__dropdown-content {
   display: grid;
@@ -147,14 +207,29 @@ h1, h2, h3, h4, h5, h6 {
   width: 716px;
   font-size: 16px;
   font-weight: 600;
+  color: #25406b;
+  box-shadow: 1px 1px 20px rgba(71, 71, 71, 0.1);
+  border-radius: 16px;
 }
 .menu__dropdown-item {
-  padding: 16px 16px;
+  margin: 12px 12px;
   display: flex;
+  border-radius: 20px;
+  align-items: center;
+}
+.menu__dropdown-item:hover {
+  background-color: #f6faff;
+  color: #0c7dff;
+  cursor: pointer;
 }
 .menu__dropdown-item-icon {
   width: 48px;
   height: 48px;
+  border-radius: 50%;
+  margin: 20px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .menu__navigation {
   width: 100%;

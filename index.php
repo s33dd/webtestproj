@@ -34,51 +34,57 @@
                         <div class="menu__dropdown-wrapper">
                             <div class="menu__dropdown-content">
                                 <div class="menu__dropdown-item">
-                                    <div class="menu__dropdown-item-icon">
-                                        <i class="icon-chart-line menu__dropdown-icon_chart"></i>
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_chart">
+                                        <i class="icon-chart-line"></i>
                                     </div>
                                     <div class="menu__dropdown-category">
                                         <span>Бухгалтерский учёт</span>
+                                        <p>Сопровождение бухгалтерии и отдела кадров предприятий</p>
                                     </div>
                                 </div>
                                 <div class="menu__dropdown-item">
-                                    <div class="menu__dropdown-item-icon">
-                                        <i class="icon-money menu__dropdown-icon_money"></i>
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_money">
+                                        <i class="icon-money"></i>
                                     </div>
                                     <div class="menu__dropdown-category">
                                         <span>Зарплата и кадры</span>
+                                        <p>Кадровое делопроизводство с нуля, учет и начисление зарплаты</p>
                                     </div>
                                 </div>
                                 <div class="menu__dropdown-item">
-                                    <div class="menu__dropdown-item-icon">
-                                        <i class="icon-round-arrow menu__dropdown-icon_arrow"></i>
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_arrow">
+                                        <i class="icon-round-arrow"></i>
                                     </div>
                                     <div class="menu__dropdown-category">
                                         <span>Восстановление учёта и отчётности</span>
+                                        <p>Восстановим бухгалтерский учёт и отчетность в любом состоянии</p>
                                     </div>
                                 </div>
                                 <div class="menu__dropdown-item">
-                                    <div class="menu__dropdown-item-icon">
-                                        <i class="icon-question menu__dropdown-icon_question"></i>
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_question">
+                                        <i class="icon-question"></i>
                                     </div>
                                     <div class="menu__dropdown-category">
                                         <span>Консультация бухгалтера</span>
+                                        <p>Консультация главного бухгалтера для руководителей предприятий</p>
                                     </div>
                                 </div>
                                 <div class="menu__dropdown-item">
-                                    <div class="menu__dropdown-item-icon">
-                                        <i class="icon-paper-tablet menu__dropdown-icon_tablet"></i>
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_tablet">
+                                        <i class="icon-paper-tablet"></i>
                                     </div>
                                     <div class="menu__dropdown-category">
                                         <span>Нулевая отчётность</span>
+                                        <p>Подготовим и сдадим нулевую отчетность в ИФНС и ПФР</p>
                                     </div>
                                 </div>
                                 <div class="menu__dropdown-item">
-                                    <div class="menu__dropdown-item-icon">
-                                        <i class="icon-check menu__dropdown-icon_check"></i>
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_check">
+                                        <i class="icon-check"></i>
                                     </div>
                                     <div class="menu__dropdown-category">
                                         <span>Регистрация ООО</span>
+                                        <p>Регистрация, внесение изменений и ликвидация ООО с внесением в ЕГРЮЛ</p>
                                     </div>
                                 </div>
                             </div>
