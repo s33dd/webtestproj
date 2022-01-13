@@ -101,6 +101,43 @@
                 </div>
             </nav>
         </div>
+        <div class="info container">
+            <div class="banner">
+                <div class="banner__textbox">
+                    <h1>Аутсорсинг бухгалтерского учёта</h1>
+                    <p>Полный или частичный учет бухгалтерии для организаций малого и среднего бизнеса</p>
+                    <div class="banner__buttonbox">
+                        <button>
+                            Оставить заявку
+                        </button>
+                        <button>
+                            Услуги и цены
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <img class="banner__image_linechart" src="./source/img/linechart.png">
+            <img class="banner__image_circlechart" src="./source/img/circlechart.png">
+            <img class="banner__image_dotchart" src="./source/img/dotchart.png">
+            <img class="banner__image_barchart" src="./source/img/barchart.png">
+            <img class="banner__image_histogram" src="./source/img/histogram.png">
+        </div>
+        <div class="company-info container">
+            <div class="company-info__content">
+                <span>Бухгалтерская компания «НеГа Консалтинг»</span>
+                <h2>
+                    <b>Более 20 лет</b> мы успешно оказываем полный спектр услуг по бухгалтерскому учету предприятиям и индивидуальным предпринимателям
+                </h2>
+                <div class="company-info__switcher">
+                    <button class="company-info__button active">Комплексный учет</button>
+                    <button class="company-info__button">Отчетность</button>
+                    <button class="company-info__button">Программа и консультация</button>
+                    <button class="company-info__button">Расчет заработной платы</button>
+                    <button class="company-info__button">Кадровый учет</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <? require_once (__DIR__.'/components/scripts.php')?>
 </body>
 </html>
