@@ -339,4 +339,42 @@ $screen2: 360px;
       color: $highlightColor;
     }
   }
+  &__contentbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .active {
+      display: block;
+    }
+  }
+  &__textbox {
+    width: 100%;
+    display: none;
+    &-item {
+      max-width: 580px;
+      padding: 30px 40px;
+      border-radius: 20px;
+      &:hover {
+        box-shadow: 7px 7px 60px rgb(242, 243, 246);
+        span {
+          color: $highlightColor;
+        }
+      }
+      span {
+        color: $mainFontColor;
+        height: 32px;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: none;
+        max-width: 500px;
+      }
+      p {
+        margin-top: 20px;
+        color: $mainFontColor;
+        font-size: 16px;
+        font-weight: normal;
+        max-width: 500px;
+      }
+    }
+  }
 }

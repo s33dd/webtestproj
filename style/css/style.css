@@ -420,5 +420,43 @@ h1, h2, h3, h4, h5, h6 {
 .company-info__button:hover {
   color: #0c7dff;
 }
+.company-info__contentbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.company-info__contentbox .active {
+  display: block;
+}
+.company-info__textbox {
+  width: 100%;
+  display: none;
+}
+.company-info__textbox-item {
+  max-width: 580px;
+  padding: 30px 40px;
+  border-radius: 20px;
+}
+.company-info__textbox-item:hover {
+  box-shadow: 7px 7px 60px #f2f3f6;
+}
+.company-info__textbox-item:hover span {
+  color: #0c7dff;
+}
+.company-info__textbox-item span {
+  color: #25406b;
+  height: 32px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: none;
+  max-width: 500px;
+}
+.company-info__textbox-item p {
+  margin-top: 20px;
+  color: #25406b;
+  font-size: 16px;
+  font-weight: normal;
+  max-width: 500px;
+}
 
 /*# sourceMappingURL=style.css.map */
