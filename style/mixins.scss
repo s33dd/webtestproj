@@ -1,6 +1,6 @@
 @mixin icon($clr, $mrgn, $fz, $align) {
   color: $clr;
-  margin-right: $mrgn;
+  margin-left: $mrgn;
   font-size: $fz;
   vertical-align: $align;
 }

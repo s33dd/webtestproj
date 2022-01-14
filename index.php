@@ -244,6 +244,44 @@
                 </div>
             </div>
         </div>
+        <div class="service container">
+            <div class="service__background"></div>
+            <div class="service__content">
+                <div class="service__content-details">
+                    <div class="service__content-details-box">
+                        <span>Сервис</span>
+                        <h1>
+                            Аутсорсинг бухгалтерских услуг
+                            малому и среднему бизнесу
+                        </h1>
+                        <button>
+                            Подробнее
+                            <i class="icon-arrow-right icon"></i>
+                        </button>
+                    </div>
+                    <div class="service__content-details-slider">
+                        <div class="textbox">
+                            <p>
+                                Дружная команда профессиональных бухгалтеров и юристов НеГа Консалтинг.
+                                Более 20 лет оказываем бухгалтерские
+                                и юридический услуги малому и среднему бизнесу.
+                            </p>
+                            <p class="lower">
+                                Срочная помощь в ведении бизнеса для начинающих предпринимателей.
+                            </p>
+                        </div>
+                        <div class="service__content-details-slider-nav">
+                            <button>
+                                <i class="icon-arrow-left icon"></i>
+                            </button>
+                            <button>
+                                <i class="icon-arrow-right icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <? require_once (__DIR__.'/components/scripts.php')?>
 </body>

@@ -13,6 +13,7 @@ $mainFontColor: rgb(37, 64, 107);
 $subtextColor: rgb(102, 115, 143);
 $divFiller: rgb(246, 250, 255);
 $borderColor: rgb(232, 242, 254);
+$buttonHighlight: rgb(246, 250, 255);
 
 //Размеры
 $maxWidth: 1920px;
@@ -21,7 +22,18 @@ $maxContentWidth: 1419px;
 $screen1: 1024px;
 $screen2: 360px;
 
+//Шаблоны
+%span-style {
+  color: $highlightColor;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 //---------------------------
+.lower {
+  margin-top: 20px;
+}
 
 .wrapper {
   width: 100%;
@@ -214,6 +226,7 @@ $screen2: 360px;
 .info {
   height: 720px;
 }
+
 .banner {
   font-family: $standardFont;
   color: $mainFontColor;
@@ -292,6 +305,7 @@ $screen2: 360px;
 
 .company-info {
   margin-top: 130px;
+  margin-bottom: 150px;
   display: flex;
   justify-content: center;
   font-family: $standardFont;
@@ -301,10 +315,7 @@ $screen2: 360px;
     flex-direction: column;
     align-items: center;
     span {
-      color: $highlightColor;
-      font-size: 16px;
-      text-transform: uppercase;
-      font-weight: 500;
+      @extend %span-style;
     }
     h2 {
       font-size: 35px;
@@ -374,6 +385,89 @@ $screen2: 360px;
         font-size: 16px;
         font-weight: normal;
         max-width: 500px;
+      }
+    }
+  }
+}
+
+.service {
+  font-family: $standardFont;
+  &__background {
+    position: absolute;
+    background-color: $divFiller;
+    border-radius: 40px;
+    width: 80%;
+    height: 50%;
+    z-index: -1;
+    max-width: 1162px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__content {
+    span {
+      @extend %span-style;
+    }
+    h1 {
+      margin-top: 40px;
+      font-size: 35px;
+      line-height: 48px;
+      font-weight: 600;
+    }
+    &-details {
+      display: flex;
+      justify-content: space-between;
+      &-box {
+        max-width: 600px;
+        button {
+          font-size: 16px;
+          color: $highlightColor;
+          font-weight: 600;
+          background-color: $mainBkgColor;
+          height: 58px;
+          width: 201px;
+          margin: 60px 25px;
+          @include border(1px, solid, rgb(214, 219, 237), 10px);
+          .icon {
+            @include icon($highlightColor, 12px, 100%, middle);
+          }
+          &:hover {
+            border-color: $highlightColor;
+          }
+        }
+      }
+      &-slider {
+        .textbox {
+          max-width: 600px;
+          background-color: $mainBkgColor;
+          border-radius: 20px;
+          padding: 50px 40px;
+          @include border(1px, solid, black, 20px);
+          p {
+            max-width: 500px;
+            font-size: 16px;
+            color: $subtextColor;
+            line-height: 28px;
+          }
+        }
+        &-nav {
+          display: flex;
+          justify-content: flex-end;
+          button {
+            background-color: $mainBkgColor;
+            height: 56px;
+            width: 56px;
+            border-radius: 50%;
+            margin-top: 11px;
+            margin-left: 20px;
+            @include border(1px, solid, rgb(214, 219, 237), 50%);
+            &:hover {
+              background-color: $buttonHighlight;
+            }
+          }
+          .icon {
+            @include icon($highlightColor, 0, 16px, none);
+          }
+        }
       }
     }
   }
