@@ -261,20 +261,58 @@
                     </div>
                     <div class="service__content-details-slider">
                         <div class="textbox">
-                            <p>
-                                Дружная команда профессиональных бухгалтеров и юристов НеГа Консалтинг.
-                                Более 20 лет оказываем бухгалтерские
-                                и юридический услуги малому и среднему бизнесу.
-                            </p>
-                            <p class="lower">
-                                Срочная помощь в ведении бизнеса для начинающих предпринимателей.
-                            </p>
+                            <div class="swiper textbox__content">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Дружная команда профессиональных бухгалтеров и юристов НеГа Консалтинг.
+                                            Более 20 лет оказываем бухгалтерские
+                                            и юридический услуги малому и среднему бизнесу.
+                                        </p>
+                                        <p class="lower">
+                                            Срочная помощь в ведении бизнеса для начинающих предпринимателей.
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                        </p>
+                                        <p class="lower">
+                                            Bottom text
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <p class="lower">
+                                            Bottom text
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                        </p>
+                                        <p class="lower">
+                                            Bottom text
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="service__content-details-slider-nav">
-                            <button>
+                            <div class="pagination"></div>
+                            <button class="prevElement">
                                 <i class="icon-arrow-left icon"></i>
                             </button>
-                            <button>
+                            <button class="nextElement">
                                 <i class="icon-arrow-right icon"></i>
                             </button>
                         </div>

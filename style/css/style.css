@@ -473,10 +473,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f6faff;
   border-radius: 40px;
   width: 80%;
-  height: 50%;
+  height: 90%;
   z-index: -1;
   max-width: 1162px;
   left: 50%;
+  top: 408%;
   transform: translate(-50%, -50%);
 }
 .service__content h1 {
@@ -542,6 +543,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .service__content-details-slider-nav button:hover {
   background-color: #f6faff;
+}
+.service__content-details-slider-nav .pagination {
+  display: flex;
+  max-width: 109px;
+  align-items: center;
+  margin-right: 83px;
+}
+.service__content-details-slider-nav .pagination .swiper-pagination-bullet {
+  background-color: #bdc5da;
+  border-radius: 10px;
+  transition: 300ms width linear, 300ms background-color linear;
+}
+.service__content-details-slider-nav .pagination .swiper-pagination-bullet-active {
+  background-color: #bdc5da;
+  width: 37px;
 }
 .service__content-details-slider-nav .icon {
   color: #0c7dff;

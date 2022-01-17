@@ -5,5 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./style/css/style.css">
   <link rel="stylesheet" href="./style/css/iconsfont.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <title>Аутсорс бухгалтерия</title>
 </head>
