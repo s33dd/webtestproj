@@ -392,16 +392,17 @@ $screen2: 360px;
 
 .service {
   font-family: $standardFont;
+  position: relative;
   &__background {
     position: absolute;
     background-color: $divFiller;
     border-radius: 40px;
     width: 80%;
-    height: 90%;
+    height: 521px;
     z-index: -1;
     max-width: 1162px;
     left: 50%;
-    top: 408%;
+    top: 48%;
     transform: translate(-50%, -50%);
   }
   &__content {
@@ -442,7 +443,6 @@ $screen2: 360px;
           background-color: $mainBkgColor;
           border-radius: 20px;
           padding: 50px 40px;
-          @include border(1px, solid, black, 20px);
           p {
             max-width: 500px;
             font-size: 16px;
@@ -487,5 +487,13 @@ $screen2: 360px;
         }
       }
     }
+  }
+}
+
+.photo-slider {
+  height: 324px;
+  margin-top: 80px;
+  .photo-slide {
+    border-radius: 20px;
   }
 }

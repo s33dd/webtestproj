@@ -318,6 +318,28 @@
                         </div>
                     </div>
                 </div>
+                <div class="service__content-details photo-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="photo-slide" src="source/img/slide1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="photo-slide" src="source/img/slide2.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="photo-slide" src="source/img/slide3.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="photo-slide" src="source/img/slide2.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="photo-slide" src="source/img/slide1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="photo-slide" src="source/img/slide3.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
