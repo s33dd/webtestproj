@@ -470,20 +470,20 @@
                     <div class="variables">
                         <span>Форма организации</span>
                         <div class="buttonbox org-form">
-                            <button class="active">Юридическое лицо (ООО)</button>
-                            <button>Индивидуальный предприниматель (ИП)</button>
+                            <button class="ltd">Юридическое лицо (ООО)</button>
+                            <button class="individual active">Индивидуальный предприниматель (ИП)</button>
                         </div>
                         <span>Система налогообложения</span>
                         <div class="buttonbox tax-sys">
-                            <button class="active">УСН (доходы, 6%)</button>
-                            <button>УСН (доходы-расходы, 15%)</button>
-                            <button>Общая (ОСНО)</button>
+                            <button class="simple active">УСН (доходы, 6%)</button>
+                            <button class="income">УСН (доходы-расходы, 15%)</button>
+                            <button class="common">Общая (ОСНО)</button>
                         </div>
                         <span>Наёмные работники</span>
                         <div class="buttonbox employees">
-                            <button class="active">Отсутствуют</button>
-                            <button>До 2</button>
-                            <button>От 3 и более</button>
+                            <button class="none active">Отсутствуют</button>
+                            <button class="less-three">До 2</button>
+                            <button class="three-more">От 3 и более</button>
                         </div>
                         <span>Количество операций</span>
                         <div class="rulerbox">
@@ -516,7 +516,7 @@
                         <div class="total">
                             <span>Стоимость</span>
                             <p>
-                                <span class="answer">от 10000</span>
+                                <span class="answer"></span>
                                 ₽/месяц
                             </p>
                         </div>
