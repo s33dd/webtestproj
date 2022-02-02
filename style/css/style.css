@@ -878,6 +878,43 @@ h1, h2, h3, h4, h5, h6 {
 .calculator__content-calcbox .variables .buttonbox button:hover {
   border-color: #0c7dff;
 }
+.calculator__content-calcbox .variables .rulerbox {
+  max-width: 440px;
+}
+.calculator__content-calcbox .variables .rulerbox .calc_range {
+  width: 100%;
+  margin-top: 75px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0c7dff 0%, #0c7dff 0%, #e8f2fe 0%, #e8f2fe 100%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 20px;
+  appearance: none;
+}
+.calculator__content-calcbox .variables .rulerbox .calc_range::-webkit-slider-runnable-track {
+  height: 10px;
+}
+.calculator__content-calcbox .variables .rulerbox .calc_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  border: 2px solid #0c7dff;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: -6px;
+}
+.calculator__content-calcbox .variables .rulerbox .calc_range::-moz-range-track {
+  height: 10px;
+}
+.calculator__content-calcbox .variables .rulerbox .calc_range::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 22px;
+  width: 22px;
+  border: 2px solid #0c7dff;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: -6px;
+}
 .calculator__content-calcbox .sum {
   display: flex;
   margin-top: 60px;

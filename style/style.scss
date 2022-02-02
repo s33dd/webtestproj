@@ -786,6 +786,41 @@ $screen2: 360px;
             }
           }
         }
+        .rulerbox {
+          max-width: 440px;
+          .calc_range {
+            width: 100%;
+            margin-top: 75px;
+            cursor: pointer;
+            background: linear-gradient(90deg, $highlightColor 0%, $highlightColor 0%, rgb(232, 242, 254) 0%, rgb(232, 242, 254) 100%);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 20px;
+            appearance: none;
+            &::-webkit-slider-runnable-track {
+              height: 10px;
+            }
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              height: 22px;
+              width: 22px;
+              @include border(2px, solid, $highlightColor, 50%);
+              background-color: $mainBkgColor;
+              margin-top: -6px;
+            }
+            &::-moz-range-track {
+              height: 10px;
+            }
+            &::-moz-range-thumb {
+              -moz-appearance: none;
+              height: 22px;
+              width: 22px;
+              @include border(2px, solid, $highlightColor, 50%);
+              background-color: $mainBkgColor;
+              margin-top: -6px;
+            }
+          }
+        }
       }
       .sum {
         display: flex;

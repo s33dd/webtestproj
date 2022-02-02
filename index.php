@@ -486,6 +486,9 @@
                             <button>От 3 и более</button>
                         </div>
                         <span>Количество операций</span>
+                        <div class="rulerbox">
+                            <input class="calc_range" type="range" min="0" max="100" step="1" value="0">
+                        </div>
                     </div>
                     <div class="sum">
                         <div class="total">
