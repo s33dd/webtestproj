@@ -11,5 +11,23 @@ $(document).ready(function () {
                 $(infos[clicked]).addClass('active');
             }
         }
-    })
+    });
+
+    $('.step').click( function (e) {
+        let steps = $('.step');
+        let clicked = 0;
+        for (let i = 0; i < steps.length; i++){
+            if (this == steps[i]) {
+                clicked = i;
+            }
+        }
+        for (let i = 0; i < steps.length; i++) {
+            if (i <= clicked) {
+                $(steps[i]).addClass('step_active');
+            }
+            else {
+                $(steps[i]).removeClass('step_active');
+            }
+        }
+    });
 })

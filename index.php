@@ -342,6 +342,175 @@
                 </div>
             </div>
         </div>
+        <div class="services container">
+            <div class="services__content">
+                <span>Услуги</span>
+                <h1>
+                    Услуги бухгалтерской компании
+                </h1>
+                <p>
+                    Комплексный сервис бухгалтерских и юридических услуг по поддержке бизнеса
+                    от компании НеГа Консалтинг!
+                </p>
+                <div class="services__content-categories">
+                    <div class="category category_count">
+                        <div class="icon icon_chart">
+                            <i class="icon-chart-line"></i>
+                        </div>
+                        <span class="chart">Бухгалтерский учёт</span>
+                        <p>
+                            Сопровождение бухгалтерии и отдела кадров предприятий
+                        </p>
+                    </div>
+                    <div class="category category_recovery">
+                        <div class="icon icon_round">
+                            <i class="icon-round-arrow"></i>
+                        </div>
+                        <span class="round">Восстановление отчетности</span>
+                        <p>
+                            Восстановим бухгалтерскую отчетность в любом состоянии
+                        </p>
+                    </div>
+                    <div class="category category_report">
+                        <div class="icon icon_tablet">
+                            <i class="icon-paper-tablet"></i>
+                        </div>
+                        <span class="tablet">Нулевая отчетность</span>
+                        <p>
+                            Подготовим и сдадим нулевую отчетность в ИФНС и ПФР
+                        </p>
+                    </div>
+                    <div class="category category_salary">
+                        <div class="icon icon_money">
+                            <i class="icon-money"></i>
+                        </div>
+                        <span class="money">Зарплата и кадры</span>
+                        <p>
+                            Кадровое делопроизводство с нуля, учет и начисление зарплаты
+                        </p>
+                    </div>
+                    <div class="category category_consult">
+                        <div class="icon icon_question">
+                            <i class="icon-question"></i>
+                        </div>
+                        <span class="question">Консультация бухгалтера</span>
+                        <p>
+                            Консультация главного бухгалтера для руководителей предприятий
+                        </p>
+                    </div>
+                    <div class="category category_ltd">
+                        <div class="icon icon_check">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="check">Регистрация ООО</span>
+                        <p>
+                            Регистрация, внесение изменений и ликвидация ООО с внесением в ЕГРЮЛ
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-us container">
+            <div class="about-us__content">
+                <div class="about-us__content-textbox">
+                    <span>О нас</span>
+                    <h1>Как мы работаем?</h1>
+                    <p>
+                        Заказать бухгалтерский учет для вашей компании очень просто.
+                        Для этого вам необходимо сделать несколько простых шагов, и мы приведем вашу
+                        бухгалтерию в порядок!
+                    </p>
+                </div>
+                <div class="about-us__content-contact">
+                    <div class="steps">
+                        <div class="step step_active">
+                            <div class="step__num">1</div>
+                            <div class="step__line"></div>
+                            <div class="step__description">
+                                Свяжитесь с нами
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step__num">2</div>
+                            <div class="step__line"></div>
+                            <div class="step__description">
+                                Заключите выгодный договор
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step__num">3</div>
+                            <div class="step__line"></div>
+                            <div class="step__description">
+                                Передайте дела и поставьте задачи
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step__num">4</div>
+                            <div class="step__line"></div>
+                            <div class="step__description">
+                                Управляйте бизнесом
+                            </div>
+                        </div>
+                    </div>
+                    <span>Свяжитесь с нами удобным для вас способом</span>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    </p>
+                    <button>
+                        Связаться с нами
+                    </button>
+                </div>
+            </div>
+            <img src="/source/img/point-arrow.png">
+        </div>
+        <div class="calculator container">
+            <div class="calculator__content">
+                <div class="calculator__content-calcbox">
+                    <div class="variables">
+                        <span>Форма организации</span>
+                        <div class="buttonbox">
+                            <button class="active">Юридическое лицо (ООО)</button>
+                            <button>Индивидуальный предприниматель (ИП)</button>
+                        </div>
+                        <span>Система налогообложения</span>
+                        <div class="buttonbox">
+                            <button class="active">УСН (доходы, 6%)</button>
+                            <button>УСН (доходы-расходы, 15%)</button>
+                            <button>Общая (ОСНО)</button>
+                        </div>
+                        <span>Наёмные работники</span>
+                        <div class="buttonbox">
+                            <button class="active">Отсутствуют</button>
+                            <button>До 2</button>
+                            <button>От 3 и более</button>
+                        </div>
+                        <span>Количество операций</span>
+                    </div>
+                    <div class="sum">
+                        <div class="total">
+                            <span>Стоимость</span>
+                            <p>
+                                <span class="answer">от 10000</span>
+                                ₽/месяц
+                            </p>
+                        </div>
+                        <button>Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="calculator__content-textbox">
+                    <span>Онлайн-калькулятор</span>
+                    <h1>
+                        Узнайте стоимость бухгалтерского обслуживания в пару кликов
+                    </h1>
+                    <p>
+                        Дружная команда профессиональных бухгалтеров и юристов НеГа Консалтинг.
+                        Более 20 лет оказываем бухгалтерские
+                        и юридический услуги малому и среднему бизнесу.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <? require_once (__DIR__.'/components/scripts.php')?>
 </body>

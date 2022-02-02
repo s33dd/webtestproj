@@ -4,6 +4,7 @@
 
 //Подключение шрифтов
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 $standardFont: "Noto Sans";
 
 //Цвета
@@ -12,7 +13,7 @@ $highlightColor: rgb(12, 125, 255);
 $mainFontColor: rgb(37, 64, 107);
 $subtextColor: rgb(102, 115, 143);
 $divFiller: rgb(246, 250, 255);
-$borderColor: rgb(232, 242, 254);
+$borderColor: rgb(214, 219, 237);
 $buttonHighlight: rgb(246, 250, 255);
 
 //Размеры
@@ -393,6 +394,7 @@ $screen2: 360px;
 .service {
   font-family: $standardFont;
   position: relative;
+  margin-bottom: 140px;
   &__background {
     position: absolute;
     background-color: $divFiller;
@@ -433,7 +435,7 @@ $screen2: 360px;
             @include icon($highlightColor, 12px, 100%, middle);
           }
           &:hover {
-            border-color: $highlightColor;
+            background-color: rgb(232, 242, 254);
           }
         }
       }
@@ -460,7 +462,7 @@ $screen2: 360px;
             border-radius: 50%;
             margin-top: 11px;
             margin-left: 20px;
-            @include border(1px, solid, rgb(214, 219, 237), 50%);
+            @include border(1px, solid, $borderColor, 50%);
             &:hover {
               background-color: $buttonHighlight;
             }
@@ -495,5 +497,359 @@ $screen2: 360px;
   margin-top: 80px;
   .photo-slide {
     border-radius: 20px;
+  }
+}
+
+.services {
+  font-family: $standardFont;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      @extend %span-style;
+    }
+    h1 {
+      font-weight: 600;
+      line-height: 48px;
+      font-size: 35px;
+      margin-top: 40px;
+    }
+    p {
+      font-weight: 400;
+      line-height: 28px;
+      font-size: 16px;
+      max-width: 500px;
+      margin-top: 24px;
+      color: $subtextColor;
+    }
+    &-categories {
+      margin-top: 60px;
+      margin-bottom: 120px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 24px 65px;
+      width: 100%;
+    }
+    .category {
+      @include border(1px, solid, transparent, 0);
+      padding-top: 30px;
+      padding-bottom: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 25px;
+      box-shadow: 0 11px 28px 1px rgb(230, 234, 245);
+      .icon {
+        border-radius: 50%;
+        width: 85px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 28px;
+        &_chart {
+          @include icon(rgb(245, 129, 140), 0, 30px, middle);
+          background-color: rgba(245, 129, 140, 0.1);
+        }
+        &_round {
+          @include icon(rgb(111, 60, 255), 0, 30px, middle);
+          background-color: rgba(111, 60, 255, 0.1);
+        }
+        &_tablet {
+          @include icon(rgb(4, 210, 252), 0, 30px, middle);
+          background-color: rgba(4, 210, 252, 0.1);
+        }
+        &_money {
+          @include icon(rgb(71, 211, 155), 0, 30px, middle);
+          background-color: rgba(71, 211, 155, 0.1);
+        }
+        &_question {
+          @include icon(rgb(255, 160, 92), 0, 30px, middle);
+          background-color: rgba(255, 160, 92, 0.1);
+        }
+        &_check {
+          @include icon(rgb(12, 125, 255), 0, 20px, middle);
+          background-color: rgba(12, 125, 255, 0.1);
+        }
+      }
+      span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        text-transform: none;
+        color: $mainFontColor;
+      }
+      p {
+        max-width: 340px;
+      }
+      &_count:hover {
+        border-color: rgb(245, 129, 140);
+      }
+      &_recovery:hover {
+        border-color: rgb(111, 60, 255);
+      }
+      &_report:hover {
+        border-color: rgb(4, 210, 252);
+      }
+      &_salary:hover {
+        border-color: rgb(71, 211, 155);
+      }
+      &_consult:hover {
+        border-color: rgb(255, 160, 92);
+      }
+      &_ltd:hover {
+        border-color: rgb(12, 125, 255);
+      }
+      &:hover {
+        cursor: pointer;
+        .chart {
+          color: rgb(245, 129, 140);
+        }
+        .round {
+          color: rgb(111, 60, 255);
+        }
+        .tablet {
+          color: rgb(4, 210, 252);
+        }
+        .money {
+          color: rgb(71, 211, 155);
+        }
+        .question {
+          color: rgb(255, 160, 92);
+        }
+        .check {
+          color: rgb(12, 125, 255);
+        }
+      }
+    }
+  }
+}
+
+.about-us {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  max-height: 535px;
+  &__content {
+    display: flex;
+    width: 100%;
+    &-textbox {
+      margin-top: 64px;
+      max-width: 527px;
+      span {
+        @extend %span-style;
+      }
+      h1 {
+        margin-top: 40px;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 48px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $subtextColor;
+      }
+    }
+    &-contact {
+      margin-left: 123px;
+      width: 100%;
+      background-color: $divFiller;
+      border-radius: 40px;
+      display: flex;
+      flex-direction: column;
+      .steps {
+        margin: 51px 60px 60px;
+        color: rgb(182, 216, 255);
+        display: flex;
+        width: 100%;
+        max-width: 650px;
+        .step {
+          width: 25%;
+          transition: color 300ms linear;
+          &__num {
+            font-family: Source Sans Pro;
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 600;
+          }
+          &__line {
+            height: 4px;
+            background-color: rgb(182, 216, 255);
+            margin-top: 12px;
+            margin-bottom: 24px;
+            transition: background-color 300ms linear;
+          }
+          &__description {
+            max-width: 149px;
+          }
+          &_active {
+            color: $highlightColor !important;
+            .step__line {
+              background-color: $highlightColor !important;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            color: rgb(131, 189, 255);
+            .step__line {
+              background-color: rgb(131, 189, 255);
+            }
+          }
+        }
+      }
+      span {
+        margin-left: 60px;
+        max-width: 500px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+      }
+      p {
+        color: $subtextColor;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 500px;
+        margin-left: 60px;
+        margin-bottom: 39px;
+      }
+      button {
+        margin-bottom: 60px;
+        width: 207px;
+        height: 58px;
+        background-color: $highlightColor;
+        border-radius: 8px;
+        margin-left: 60px;
+        color: $mainBkgColor;
+        font-weight: 400;
+        font-size: 16px;
+        &:hover {
+          background-color: $mainBkgColor;
+          color: $highlightColor;
+          @include border(1px, solid, $subtextColor, 8px)
+        }
+      }
+    }
+  }
+  img {
+    position: relative;
+    bottom: 180px;
+    left: 320px;
+  }
+}
+
+.calculator {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  &__content {
+    display: flex;
+    width: 100%;
+    &-calcbox {
+      width: 50%;
+      border-radius: 40px;
+      background-color: $divFiller;
+      padding: 34px 51px 46px;
+      .variables {
+        span {
+          color: $mainFontColor;
+          font-weight: 500;
+          font-size: 16px;
+        }
+        .buttonbox {
+          margin-top: 12px;
+          margin-bottom: 32px;
+          display: flex;
+          .active {
+            background-color: rgb(232, 242, 254);
+            border-color: $highlightColor;
+          }
+          button {
+            padding: 18px 32px;
+            margin-right: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            background-color: $mainBkgColor;
+            color: $highlightColor;
+            font-weight: 600;
+            @include border(1px, solid, $borderColor, 8px);
+            &:hover {
+              border-color: $highlightColor;
+            }
+          }
+        }
+      }
+      .sum {
+        display: flex;
+        margin-top: 60px;
+        justify-content: space-between;
+        align-items: center;
+        .total {
+          span {
+            font-weight: 600;
+            color: $mainFontColor;
+            font-size: 20px;
+            line-height: 32px;
+          }
+          p {
+            color: $highlightColor;
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .answer {
+            font-weight: 600;
+            color: $highlightColor;
+            font-size: 40px;
+            line-height: 46px;
+            margin-right: 12px;
+          }
+        }
+        button {
+          padding: 18px 32px;
+          max-height: 58px;
+          background-color: $highlightColor;
+          color: $mainBkgColor;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 8px;
+          &:hover {
+            background-color: $mainBkgColor;
+            color: $highlightColor;
+            @include border(1px, solid, $subtextColor, 8px);
+          }
+        }
+      }
+    }
+    &-textbox {
+      width: 50%;
+      padding-left: 61px;
+      margin-top: 64px;
+      span {
+        @extend %span-style;
+      }
+      h1 {
+        margin-top: 40px;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 48px;
+        color: $mainFontColor;
+        margin-bottom: 24px;
+      }
+      p {
+        color: $subtextColor;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        max-width: 500px;
+      }
+    }
   }
 }

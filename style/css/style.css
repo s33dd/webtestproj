@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-.service__content span, .company-info__content span {
+.calculator__content-textbox span, .about-us__content-textbox span, .services__content span, .service__content span, .company-info__content span {
   color: #0c7dff;
   font-size: 16px;
   text-transform: uppercase;
@@ -270,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 .menu__navigation-number:hover {
-  border: 1px solid #e8f2fe;
+  border: 1px solid #d6dbed;
   border-radius: 8px;
   padding-right: 20px;
   padding-left: 20px;
@@ -468,6 +469,7 @@ h1, h2, h3, h4, h5, h6 {
 .service {
   font-family: "Noto Sans";
   position: relative;
+  margin-bottom: 140px;
 }
 .service__background {
   position: absolute;
@@ -512,7 +514,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 .service__content-details-box button:hover {
-  border-color: #0c7dff;
+  background-color: #e8f2fe;
 }
 .service__content-details-slider .textbox {
   max-width: 600px;
@@ -571,6 +573,369 @@ h1, h2, h3, h4, h5, h6 {
 }
 .photo-slider .photo-slide {
   border-radius: 20px;
+}
+
+.services {
+  font-family: "Noto Sans";
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.services__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services__content h1 {
+  font-weight: 600;
+  line-height: 48px;
+  font-size: 35px;
+  margin-top: 40px;
+}
+.services__content p {
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 16px;
+  max-width: 500px;
+  margin-top: 24px;
+  color: #66738f;
+}
+.services__content-categories {
+  margin-top: 60px;
+  margin-bottom: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px 65px;
+  width: 100%;
+}
+.services__content .category {
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 0 11px 28px 1px #e6eaf5;
+}
+.services__content .category .icon {
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.services__content .category .icon_chart {
+  color: #f5818c;
+  margin-left: 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background-color: rgba(245, 129, 140, 0.1);
+}
+.services__content .category .icon_round {
+  color: #6f3cff;
+  margin-left: 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background-color: rgba(111, 60, 255, 0.1);
+}
+.services__content .category .icon_tablet {
+  color: #04d2fc;
+  margin-left: 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background-color: rgba(4, 210, 252, 0.1);
+}
+.services__content .category .icon_money {
+  color: #47d39b;
+  margin-left: 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background-color: rgba(71, 211, 155, 0.1);
+}
+.services__content .category .icon_question {
+  color: #ffa05c;
+  margin-left: 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background-color: rgba(255, 160, 92, 0.1);
+}
+.services__content .category .icon_check {
+  color: #0c7dff;
+  margin-left: 0;
+  font-size: 20px;
+  vertical-align: middle;
+  background-color: rgba(12, 125, 255, 0.1);
+}
+.services__content .category span {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: none;
+  color: #25406b;
+}
+.services__content .category p {
+  max-width: 340px;
+}
+.services__content .category_count:hover {
+  border-color: #f5818c;
+}
+.services__content .category_recovery:hover {
+  border-color: #6f3cff;
+}
+.services__content .category_report:hover {
+  border-color: #04d2fc;
+}
+.services__content .category_salary:hover {
+  border-color: #47d39b;
+}
+.services__content .category_consult:hover {
+  border-color: #ffa05c;
+}
+.services__content .category_ltd:hover {
+  border-color: #0c7dff;
+}
+.services__content .category:hover {
+  cursor: pointer;
+}
+.services__content .category:hover .chart {
+  color: #f5818c;
+}
+.services__content .category:hover .round {
+  color: #6f3cff;
+}
+.services__content .category:hover .tablet {
+  color: #04d2fc;
+}
+.services__content .category:hover .money {
+  color: #47d39b;
+}
+.services__content .category:hover .question {
+  color: #ffa05c;
+}
+.services__content .category:hover .check {
+  color: #0c7dff;
+}
+
+.about-us {
+  font-family: "Noto Sans";
+  margin-bottom: 120px;
+  max-height: 535px;
+}
+.about-us__content {
+  display: flex;
+  width: 100%;
+}
+.about-us__content-textbox {
+  margin-top: 64px;
+  max-width: 527px;
+}
+.about-us__content-textbox h1 {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+.about-us__content-textbox p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #66738f;
+}
+.about-us__content-contact {
+  margin-left: 123px;
+  width: 100%;
+  background-color: #f6faff;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.about-us__content-contact .steps {
+  margin: 51px 60px 60px;
+  color: #b6d8ff;
+  display: flex;
+  width: 100%;
+  max-width: 650px;
+}
+.about-us__content-contact .steps .step {
+  width: 25%;
+  transition: color 300ms linear;
+}
+.about-us__content-contact .steps .step__num {
+  font-family: Source Sans Pro;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 600;
+}
+.about-us__content-contact .steps .step__line {
+  height: 4px;
+  background-color: #b6d8ff;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  transition: background-color 300ms linear;
+}
+.about-us__content-contact .steps .step__description {
+  max-width: 149px;
+}
+.about-us__content-contact .steps .step_active {
+  color: #0c7dff !important;
+}
+.about-us__content-contact .steps .step_active .step__line {
+  background-color: #0c7dff !important;
+}
+.about-us__content-contact .steps .step:hover {
+  cursor: pointer;
+  color: #83bdff;
+}
+.about-us__content-contact .steps .step:hover .step__line {
+  background-color: #83bdff;
+}
+.about-us__content-contact span {
+  margin-left: 60px;
+  max-width: 500px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+.about-us__content-contact p {
+  color: #66738f;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  max-width: 500px;
+  margin-left: 60px;
+  margin-bottom: 39px;
+}
+.about-us__content-contact button {
+  margin-bottom: 60px;
+  width: 207px;
+  height: 58px;
+  background-color: #0c7dff;
+  border-radius: 8px;
+  margin-left: 60px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.about-us__content-contact button:hover {
+  background-color: white;
+  color: #0c7dff;
+  border: 1px solid #66738f;
+  border-radius: 8px;
+}
+.about-us img {
+  position: relative;
+  bottom: 180px;
+  left: 320px;
+}
+
+.calculator {
+  font-family: "Noto Sans";
+  margin-bottom: 120px;
+}
+.calculator__content {
+  display: flex;
+  width: 100%;
+}
+.calculator__content-calcbox {
+  width: 50%;
+  border-radius: 40px;
+  background-color: #f6faff;
+  padding: 34px 51px 46px;
+}
+.calculator__content-calcbox .variables span {
+  color: #25406b;
+  font-weight: 500;
+  font-size: 16px;
+}
+.calculator__content-calcbox .variables .buttonbox {
+  margin-top: 12px;
+  margin-bottom: 32px;
+  display: flex;
+}
+.calculator__content-calcbox .variables .buttonbox .active {
+  background-color: #e8f2fe;
+  border-color: #0c7dff;
+}
+.calculator__content-calcbox .variables .buttonbox button {
+  padding: 18px 32px;
+  margin-right: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  background-color: white;
+  color: #0c7dff;
+  font-weight: 600;
+  border: 1px solid #d6dbed;
+  border-radius: 8px;
+}
+.calculator__content-calcbox .variables .buttonbox button:hover {
+  border-color: #0c7dff;
+}
+.calculator__content-calcbox .sum {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+.calculator__content-calcbox .sum .total span {
+  font-weight: 600;
+  color: #25406b;
+  font-size: 20px;
+  line-height: 32px;
+}
+.calculator__content-calcbox .sum .total p {
+  color: #0c7dff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.calculator__content-calcbox .sum .total .answer {
+  font-weight: 600;
+  color: #0c7dff;
+  font-size: 40px;
+  line-height: 46px;
+  margin-right: 12px;
+}
+.calculator__content-calcbox .sum button {
+  padding: 18px 32px;
+  max-height: 58px;
+  background-color: #0c7dff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.calculator__content-calcbox .sum button:hover {
+  background-color: white;
+  color: #0c7dff;
+  border: 1px solid #66738f;
+  border-radius: 8px;
+}
+.calculator__content-textbox {
+  width: 50%;
+  padding-left: 61px;
+  margin-top: 64px;
+}
+.calculator__content-textbox h1 {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 48px;
+  color: #25406b;
+  margin-bottom: 24px;
+}
+.calculator__content-textbox p {
+  color: #66738f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  max-width: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */
