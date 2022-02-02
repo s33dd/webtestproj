@@ -758,6 +758,7 @@ $screen2: 360px;
       border-radius: 40px;
       background-color: $divFiller;
       padding: 34px 51px 46px;
+      z-index: 0;
       .variables {
         span {
           color: $mainFontColor;
@@ -788,15 +789,50 @@ $screen2: 360px;
         }
         .rulerbox {
           max-width: 440px;
+          position: relative;
+          .range_value {
+            margin-top: 24px;
+            position: absolute;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 64px;
+              height: 36px;
+              background-color: rgb(182, 216, 255);
+              z-index: -1;
+              border-radius: 16px;
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left:50%;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              background-color: rgb(182, 216, 255);
+              z-index: -1;
+              width: 20px;
+              height: 14px;
+              transform: translateX(-50%) rotate(45deg);
+              top: 90%;
+              left: 50%;
+            }
+          }
+          .ruler {
+            position: relative;
+            height: 80px;
+            display: flex;
+            align-items: flex-end;
+          }
           .calc_range {
             width: 100%;
-            margin-top: 75px;
+            margin-top: 22px;
             cursor: pointer;
             background: linear-gradient(90deg, $highlightColor 0%, $highlightColor 0%, rgb(232, 242, 254) 0%, rgb(232, 242, 254) 100%);
             -webkit-appearance: none;
             -moz-appearance: none;
             border-radius: 20px;
             appearance: none;
+            max-height: 10px;
             &::-webkit-slider-runnable-track {
               height: 10px;
             }
@@ -805,6 +841,7 @@ $screen2: 360px;
               height: 22px;
               width: 22px;
               @include border(2px, solid, $highlightColor, 50%);
+              outline: 6px solid rgb(182, 216, 255);
               background-color: $mainBkgColor;
               margin-top: -6px;
             }

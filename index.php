@@ -487,7 +487,10 @@
                         </div>
                         <span>Количество операций</span>
                         <div class="rulerbox">
-                            <input class="calc_range" type="range" min="0" max="100" step="1" value="0">
+                            <div class="range_value"></div>
+                            <div class="ruler">
+                                <input class="calc_range" type="range" min="0" max="100" step="1" value="0">
+                            </div>
                         </div>
                     </div>
                     <div class="sum">
