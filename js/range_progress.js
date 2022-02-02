@@ -28,7 +28,5 @@ $(document).ready(function () {
         value_window.css({
             left: progress * 4.2
         });
-        console.log(value);
-        console.log(progress);
     });
 });

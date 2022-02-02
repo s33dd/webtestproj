@@ -793,6 +793,9 @@ $screen2: 360px;
           .range_value {
             margin-top: 24px;
             position: absolute;
+            color: $highlightColor;
+            font-weight: 600;
+            font-size: 16px;
             &::before {
               content: "";
               position: absolute;
@@ -855,6 +858,36 @@ $screen2: 360px;
               @include border(2px, solid, $highlightColor, 50%);
               background-color: $mainBkgColor;
               margin-top: -6px;
+            }
+          }
+          .ticks {
+            margin-top: 13px;
+            display: flex;
+            justify-content: space-between;
+            span {
+              color: rgb(189, 197, 218);
+              font-size: 12px;
+              font-weight: 500;
+            }
+            .main {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              margin-left: 42px;
+              margin-right: 24px;
+              .tick {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: rgb(189, 197, 218);
+              }
+            }
+            .end {
+              margin-left: auto;
+            }
+            .large {
+              font-weight: 600;
+              font-size: 16px;
             }
           }
         }

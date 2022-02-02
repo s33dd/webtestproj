@@ -886,6 +886,9 @@ h1, h2, h3, h4, h5, h6 {
 .calculator__content-calcbox .variables .rulerbox .range_value {
   margin-top: 24px;
   position: absolute;
+  color: #0c7dff;
+  font-weight: 600;
+  font-size: 16px;
 }
 .calculator__content-calcbox .variables .rulerbox .range_value::before {
   content: "";
@@ -951,6 +954,36 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   background-color: white;
   margin-top: -6px;
+}
+.calculator__content-calcbox .variables .rulerbox .ticks {
+  margin-top: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+.calculator__content-calcbox .variables .rulerbox .ticks span {
+  color: #bdc5da;
+  font-size: 12px;
+  font-weight: 500;
+}
+.calculator__content-calcbox .variables .rulerbox .ticks .main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 42px;
+  margin-right: 24px;
+}
+.calculator__content-calcbox .variables .rulerbox .ticks .main .tick {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #bdc5da;
+}
+.calculator__content-calcbox .variables .rulerbox .ticks .end {
+  margin-left: auto;
+}
+.calculator__content-calcbox .variables .rulerbox .ticks .large {
+  font-weight: 600;
+  font-size: 16px;
 }
 .calculator__content-calcbox .sum {
   display: flex;

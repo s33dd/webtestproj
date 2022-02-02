@@ -469,18 +469,18 @@
                 <div class="calculator__content-calcbox">
                     <div class="variables">
                         <span>Форма организации</span>
-                        <div class="buttonbox">
+                        <div class="buttonbox org-form">
                             <button class="active">Юридическое лицо (ООО)</button>
                             <button>Индивидуальный предприниматель (ИП)</button>
                         </div>
                         <span>Система налогообложения</span>
-                        <div class="buttonbox">
+                        <div class="buttonbox tax-sys">
                             <button class="active">УСН (доходы, 6%)</button>
                             <button>УСН (доходы-расходы, 15%)</button>
                             <button>Общая (ОСНО)</button>
                         </div>
                         <span>Наёмные работники</span>
-                        <div class="buttonbox">
+                        <div class="buttonbox employees">
                             <button class="active">Отсутствуют</button>
                             <button>До 2</button>
                             <button>От 3 и более</button>
@@ -490,6 +490,25 @@
                             <div class="range_value"></div>
                             <div class="ruler">
                                 <input class="calc_range" type="range" min="0" max="100" step="1" value="0">
+                            </div>
+                            <div class="ticks">
+                                <div class="start">
+                                    <span class="large">0</span>
+                                </div>
+                                <div class="main">
+                                    <span class="tick"></span>
+                                    <span>20</span>
+                                    <span class="tick"></span>
+                                    <span>40</span>
+                                    <span class="tick"></span>
+                                    <span>60</span>
+                                    <span class="tick"></span>
+                                    <span>80</span>
+                                    <span class="tick"></span>
+                                </div>
+                                <div class="end">
+                                    <span class="large">100</span>
+                                </div>
                             </div>
                         </div>
                     </div>
