@@ -31,6 +31,25 @@ $screen2: 360px;
   font-weight: 500;
 }
 
+%pagination-style {
+  display: flex;
+  max-width: 109px;
+  align-items: center;
+  .swiper-pagination-bullet {
+    background-color: rgb(189, 197, 218);
+    border-radius: 10px;
+    transition: 300ms width linear, 300ms background-color linear;
+    &-active {
+      background-color: rgb(189, 197, 218);
+      width: 37px;
+    }
+  }
+}
+
+%shadow {
+  box-shadow: 0 11px 28px 1px rgb(242, 243, 246);
+}
+
 //---------------------------
 .lower {
   margin-top: 20px;
@@ -468,20 +487,8 @@ $screen2: 360px;
             }
           }
           .pagination {
-            display: flex;
-            max-width: 109px;
-            align-items: center;
+            @extend %pagination-style;
             margin-right: 83px;
-            .swiper-pagination-bullet {
-              //background-color: rgb(230, 234, 245);
-              background-color: rgb(189, 197, 218);
-              border-radius: 10px;
-              transition: 300ms width linear, 300ms background-color linear;
-              &-active {
-                background-color: rgb(189, 197, 218);
-                width: 37px;
-              }
-            }
           }
           .icon {
             @include icon($highlightColor, 0, 16px, none);
@@ -955,6 +962,97 @@ $screen2: 360px;
         line-height: 28px;
         max-width: 500px;
       }
+    }
+  }
+}
+
+.reviews {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  &__content {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    &-textbox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        @extend %span-style;
+      }
+      h1 {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 48px;
+        color: $mainFontColor;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $subtextColor;
+        max-width: 500px;
+      }
+    }
+    &-reviewbox {
+      width: 100%;
+      .swiper-wrapper {
+        padding-bottom: 60px;
+        padding-top: 60px;
+        .swiper-slide {
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+      .review {
+        padding: 32px 60px;
+        border-radius: 25px;
+        text-align: left;
+        @extend %shadow;
+        p {
+          max-width: 560px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 28px;
+          margin-bottom: 36px;
+          color: $subtextColor;
+        }
+        .name {
+          color: $mainFontColor;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .company {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 28px;
+          color: $subtextColor;
+        }
+        &__bottom {
+          display: flex;
+          &-img {
+            background-color: $highlightColor;
+            margin-right: 24px;
+            height: 50px;
+            width: 50px;
+            border-radius: 8px;
+          }
+          &-text {
+            display: flex;
+            flex-direction: column;
+          }
+
+        }
+      }
+    }
+    .reviewbox-pagination {
+      @extend %pagination-style;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

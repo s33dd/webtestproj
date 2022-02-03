@@ -536,6 +536,144 @@
                 </div>
             </div>
         </div>
+        <div class="reviews container">
+            <div class="reviews__content">
+                <div class="reviews__content-textbox">
+                    <span>Отзывы</span>
+                    <h1>
+                        Lorem ipsum dolor
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore
+                    </p>
+                </div>
+                <div class="reviews__content-reviewbox swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="review__body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco
+                                    </p>
+                                </div>
+                                <div class="review__bottom">
+                                    <div class="review__bottom-img">
+
+                                    </div>
+                                    <div class="review__bottom-text">
+                                        <span class="name">Мушон Илона</span>
+                                        <span class="company">Компания «L'Oréal»</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="review">
+                                <div class="review__body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco
+                                    </p>
+                                </div>
+                                <div class="review__bottom">
+                                    <div class="review__bottom-img">
+
+                                    </div>
+                                    <div class="review__bottom-text">
+                                        <span class="name">Мушон Илона</span>
+                                        <span class="company">Компания «L'Oréal»</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="review__body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco
+                                    </p>
+                                </div>
+                                <div class="review__bottom">
+                                    <div class="review__bottom-img">
+
+                                    </div>
+                                    <div class="review__bottom-text">
+                                        <span class="name">Мушон Илона</span>
+                                        <span class="company">Компания «L'Oréal»</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="review">
+                                <div class="review__body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco
+                                    </p>
+                                </div>
+                                <div class="review__bottom">
+                                    <div class="review__bottom-img">
+
+                                    </div>
+                                    <div class="review__bottom-text">
+                                        <span class="name">Мушон Илона</span>
+                                        <span class="company">Компания «L'Oréal»</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="review__body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco
+                                    </p>
+                                </div>
+                                <div class="review__bottom">
+                                    <div class="review__bottom-img">
+
+                                    </div>
+                                    <div class="review__bottom-text">
+                                        <span class="name">Мушон Илона</span>
+                                        <span class="company">Компания «L'Oréal»</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="review">
+                                <div class="review__body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco
+                                    </p>
+                                </div>
+                                <div class="review__bottom">
+                                    <div class="review__bottom-img">
+
+                                    </div>
+                                    <div class="review__bottom-text">
+                                        <span class="name">Мушон Илона</span>
+                                        <span class="company">Компания «L'Oréal»</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+                <div class="reviewbox-pagination"></div>
+            </div>
+        </div>
     </div>
     <? require_once (__DIR__.'/components/scripts.php')?>
 </body>
