@@ -22,7 +22,6 @@ service_text_slider.controller.control = service_img_slider;
 service_img_slider.controller.control = service_text_slider;
 
 new Swiper('.reviews__content-reviewbox', {
-    spaceBetween: 60,
     pagination: {
         el: '.reviewbox-pagination',
         clickable: true

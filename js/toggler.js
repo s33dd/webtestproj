@@ -30,4 +30,28 @@ $(document).ready(function () {
             }
         }
     });
+
+    $('.question').click( function (e) {
+        let questions = $('.question');
+        let clicked = 0;
+        for (let i = 0; i < questions.length; i++) {
+            if (this == questions[i]){
+                clicked = i;
+            }
+        }
+        $(this).toggleClass('question_active');
+        let answer = $('.question__answer').eq(clicked);
+        answer.slideToggle(500);
+    });
+
+    $("input[name='agree']").on('change', function () {
+
+        let submit = $('#consult-send');
+        if(this.checked){
+            submit.prop('disabled', false);
+        }
+        else {
+            submit.prop('disabled', true);
+        }
+    });
 });

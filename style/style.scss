@@ -5,7 +5,7 @@
 //Подключение шрифтов
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
-$standardFont: "Noto Sans";
+$standardFont: "Noto Sans", sans-serif;
 
 //Цвета
 $mainBkgColor: rgb(255, 255, 255);
@@ -48,6 +48,14 @@ $screen2: 360px;
 
 %shadow {
   box-shadow: 0 11px 28px 1px rgb(242, 243, 246);
+}
+
+%button {
+  font-size: 16px;
+  color: $highlightColor;
+  font-weight: 600;
+  background-color: $mainBkgColor;
+  @include border(1px, solid, rgb(214, 219, 237), 10px);
 }
 
 //---------------------------
@@ -210,8 +218,9 @@ $screen2: 360px;
       height: 100%;
       display: flex;
       align-items: center;
+      @include border(1px, solid, transparent, 8px);
       &:hover {
-        @include border(1px, solid, $borderColor, 8px);
+        border-color: $borderColor;
         padding-right: 20px;
         padding-left: 20px;
       }
@@ -281,14 +290,10 @@ $screen2: 360px;
   }
   &__buttonbox {
     button {
-      font-size: 16px;
-      color: $highlightColor;
-      font-weight: 600;
-      background-color: $mainBkgColor;
+      @extend %button;
+      margin: 10px;
       height: 58px;
       width: 201px;
-      margin: 10px;
-      @include border(1px, solid, rgb(214, 219, 237), 10px);
       &:hover {
         border-color: $highlightColor;
       }
@@ -442,14 +447,10 @@ $screen2: 360px;
       &-box {
         max-width: 600px;
         button {
-          font-size: 16px;
-          color: $highlightColor;
-          font-weight: 600;
-          background-color: $mainBkgColor;
+          @extend %button;
           height: 58px;
           width: 201px;
           margin: 60px 25px;
-          @include border(1px, solid, rgb(214, 219, 237), 10px);
           .icon {
             @include icon($highlightColor, 12px, 100%, middle);
           }
@@ -627,7 +628,7 @@ $screen2: 360px;
         .money {
           color: rgb(71, 211, 155);
         }
-        .question {
+        .question-mark {
           color: rgb(255, 160, 92);
         }
         .check {
@@ -682,7 +683,7 @@ $screen2: 360px;
           width: 25%;
           transition: color 300ms linear;
           &__num {
-            font-family: Source Sans Pro;
+            font-family: "Source Sans Pro", sans-serif;
             font-size: 36px;
             line-height: 46px;
             font-weight: 600;
@@ -1053,6 +1054,454 @@ $screen2: 360px;
       @extend %pagination-style;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+}
+
+.certificates {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      @extend %span-style;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 48px;
+      color: $mainFontColor;
+      margin-bottom: 60px;
+      margin-top: 40px;
+    }
+  }
+  &__box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &-images {
+      width: 100%;
+      display: flex;
+      margin-top: 40px;
+      max-width: 1076px;
+      justify-content: space-between;
+    }
+    .background {
+      position: absolute;
+      background-color: $divFiller;
+      width: 100%;
+      max-width: 754px;
+      height: 355px;
+      border-radius: 40px;
+      z-index: -1;
+      top: 0;
+    }
+  }
+}
+
+.blog {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  &__content {
+    width: 100%;
+    span {
+      @extend %span-style;
+    }
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 35px;
+      margin-bottom: 60px;
+      h1 {
+        font-weight: 600;
+        color: $mainFontColor;
+        font-size: 35px;
+        line-height: 48px;
+      }
+      button {
+        @extend %button;
+        width: 286px;
+        height: 58px;
+        &:hover {
+          background-color: rgb(232, 242, 254);
+        }
+        i {
+          @include icon($highlightColor, 12px, 100%, middle);
+        }
+      }
+    }
+    &-articles {
+      display: flex;
+      justify-content: space-between;
+      .article {
+        max-width: 444px;
+        padding: 32px;
+        border-radius: 25px;
+        img {
+          max-width: 380px;
+          max-height: 290px;
+          border-radius: 20px;
+          margin-bottom: 28px;
+        }
+        span {
+          text-transform: none;
+          font-size: 20px;
+          line-height: 32px;
+          color: $mainFontColor;
+        }
+        p {
+          max-width: 350px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 28px;
+          margin-top: 20px;
+          margin-bottom: 28px;
+          color: $subtextColor;
+        }
+        button {
+          visibility: hidden;
+          font-weight: 600;
+          font-size: 16px;
+          color: $highlightColor;
+          background-color: $mainBkgColor;
+          i {
+            @include icon($highlightColor, 10px, 16px, middle);
+          }
+        }
+        &:hover {
+          @extend %shadow;
+          cursor: pointer;
+          span {
+            color: $highlightColor;
+          }
+          button {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+.faq {
+  font-family: $standardFont;
+  margin-bottom: 150px;
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    h1 {
+      font-size: 35px;
+      font-weight: 600;
+      line-height: 48px;
+      color: $mainFontColor;
+      margin-bottom: 60px;
+    }
+    &-background {
+      background-color: $divFiller;
+      border-radius: 40px;
+      max-width: 920px;
+      position: absolute;
+      height: 72%;
+      width: 100%;
+      z-index: -1;
+      margin-top: 148px;
+    }
+    &-questions {
+      .question {
+        max-width: 800px;
+        @include border(1px, solid, transparent, 20px);
+        @extend %shadow;
+        background-color: $mainBkgColor;
+        &__title {
+          padding: 26px 40px;
+          color: $mainFontColor;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+          }
+          i {
+            @include icon(inherit, 0, 12px, middle);
+            padding-top: 4px;
+            transition: transform 500ms;
+          }
+        }
+        &__answer {
+          display: none;
+          overflow: hidden;
+          border-radius: 20px;
+          &-textbox {
+            padding: 0 40px 26px;
+            color: $subtextColor;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+          }
+        }
+        &:hover {
+          border-color: $highlightColor;
+          cursor: pointer;
+          i {
+            color: $highlightColor;
+          }
+        }
+        &_active {
+          i {
+            transform: rotate(180deg);
+          }
+          span {
+            color: $highlightColor;
+          }
+        }
+        &:not(&:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.consult {
+  font-family: $standardFont;
+  margin-bottom: 100px;
+  &__content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &-background {
+      background-color: $divFiller;
+      border-radius: 40px;
+      width: 100%;
+      max-height: 422px;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+    &-textbox {
+      width: 50%;
+      padding: 60px 0 60px 100px;
+
+      h1 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 600;
+        font-family: "Source Sans Pro", sans-serif;
+        margin-bottom: 24px;
+        color: $mainFontColor;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $subtextColor;
+        max-width: 514px;
+        margin-bottom: 40px;
+      }
+      button {
+        @extend %button;
+        width: 212px;
+        height: 58px;
+        &:hover {
+          background-color: $highlightColor;
+          color: $mainBkgColor;
+        }
+      }
+    }
+    &-form {
+      width: 50%;
+      margin: 60px 100px 60px 0;
+      max-width: 420px;
+      .form__wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: $mainBkgColor;
+        border-radius: 20px;
+        @extend %shadow;
+        padding: 30px 50px;
+        color: $mainFontColor;
+        span {
+          margin-bottom: 10px;
+          font-weight: 500;
+          font-size: 14px;
+        }
+        input {
+          &[type=text] {
+            &:focus {
+              border-color: $highlightColor;
+            }
+            width: 100%;
+            @include border(1px, solid, $borderColor, 12px);
+            height: 50px;
+            padding: 10px 20px;
+            margin-bottom: 24px;
+          }
+          &[type=submit] {
+            &:disabled {
+              cursor: not-allowed;
+            }
+            max-width: 154px;
+            height: 58px;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: $highlightColor;
+            color: $mainBkgColor;
+            font-weight: 600;
+            font-size: 16px;
+            &:hover {
+              @include border(1px, solid, $borderColor, 8px);
+              background-color: $mainBkgColor;
+              color: $highlightColor;
+            }
+          }
+        }
+        textarea {
+          @include border(1px, solid, $borderColor, 12px);
+          width: 100%;
+          height: 120px;
+          padding: 10px 20px;
+          &:focus {
+            border-color: $highlightColor;
+          }
+        }
+        .agreement {
+          display: flex;
+          margin-top: 24px;
+          height: 24px;
+          align-items: center;
+          margin-bottom: 40px;
+          input {
+            border-radius: 4px;
+            height: 18px;
+            width: 18px;
+            cursor: pointer;
+          }
+          span {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 24px;
+            color: $subtextColor;
+            margin-left: 10px;
+            margin-bottom: 0;
+          }
+          a {
+            font-weight: 500;
+            color: $highlightColor;
+            &:visited {
+              color: $highlightColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer   {
+  background-color: $divFiller;
+  font-family: $standardFont;
+  color: $mainFontColor;
+  width: 100%;
+  font-weight: 600;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 58px;
+    padding-bottom: 58px;
+    .top-part {
+      display: flex;
+      width: 100%;
+      margin-bottom: 58px;
+    }
+    .bottom-part {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      hr {
+        width: 100%;
+        background-color: rgba(102, 115, 143, 0.2);
+        height: 1px;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin-bottom: 32px;
+        text-transform: uppercase;
+        color: $subtextColor;
+        font-size: 14px;
+      }
+      a {
+        color: inherit;
+        &:not(a:last-child) {
+          margin-bottom: 28px;
+        }
+        &:visited {
+          color: inherit;
+        }
+        &:hover {
+          color: $highlightColor;
+        }
+      }
+    }
+    &-services {
+      margin-right: 107px;
+    }
+    &-vacancies {
+      max-width: 500px;
+      margin-left: auto;
+      span {
+        text-transform: uppercase;
+        color: $subtextColor;
+        font-size: 14px;
+      }
+      p {
+        margin-top: 32px;
+        color: $subtextColor;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      a {
+        font-weight: 600;
+        color: $mainFontColor;
+        &:visited {
+          color: inherit;
+        }
+        &:hover {
+          color: $highlightColor;
+        }
+      }
+    }
+    &-end {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        color: $subtextColor;
+      };
+      img {
+        position: absolute;
+        height: 34px;
+        width: 172px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }

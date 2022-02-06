@@ -393,7 +393,7 @@
                         <div class="icon icon_question">
                             <i class="icon-question"></i>
                         </div>
-                        <span class="question">Консультация бухгалтера</span>
+                        <span class="question-mark">Консультация бухгалтера</span>
                         <p>
                             Консультация главного бухгалтера для руководителей предприятий
                         </p>
@@ -560,15 +560,12 @@
                                     </p>
                                 </div>
                                 <div class="review__bottom">
-                                    <div class="review__bottom-img">
-
-                                    </div>
+                                    <div class="review__bottom-img"></div>
                                     <div class="review__bottom-text">
                                         <span class="name">Мушон Илона</span>
                                         <span class="company">Компания «L'Oréal»</span>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="review">
                                 <div class="review__body">
@@ -579,15 +576,12 @@
                                     </p>
                                 </div>
                                 <div class="review__bottom">
-                                    <div class="review__bottom-img">
-
-                                    </div>
+                                    <div class="review__bottom-img"></div>
                                     <div class="review__bottom-text">
                                         <span class="name">Мушон Илона</span>
                                         <span class="company">Компания «L'Oréal»</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -600,15 +594,12 @@
                                     </p>
                                 </div>
                                 <div class="review__bottom">
-                                    <div class="review__bottom-img">
-
-                                    </div>
+                                    <div class="review__bottom-img"></div>
                                     <div class="review__bottom-text">
                                         <span class="name">Мушон Илона</span>
                                         <span class="company">Компания «L'Oréal»</span>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="review">
                                 <div class="review__body">
@@ -619,15 +610,12 @@
                                     </p>
                                 </div>
                                 <div class="review__bottom">
-                                    <div class="review__bottom-img">
-
-                                    </div>
+                                    <div class="review__bottom-img"></div>
                                     <div class="review__bottom-text">
                                         <span class="name">Мушон Илона</span>
                                         <span class="company">Компания «L'Oréal»</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -640,15 +628,12 @@
                                     </p>
                                 </div>
                                 <div class="review__bottom">
-                                    <div class="review__bottom-img">
-
-                                    </div>
+                                    <div class="review__bottom-img"></div>
                                     <div class="review__bottom-text">
                                         <span class="name">Мушон Илона</span>
                                         <span class="company">Компания «L'Oréal»</span>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="review">
                                 <div class="review__body">
@@ -659,21 +644,250 @@
                                     </p>
                                 </div>
                                 <div class="review__bottom">
-                                    <div class="review__bottom-img">
-
-                                    </div>
+                                    <div class="review__bottom-img"></div>
                                     <div class="review__bottom-text">
                                         <span class="name">Мушон Илона</span>
                                         <span class="company">Компания «L'Oréal»</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
+                    </div>
                 </div>
                 <div class="reviewbox-pagination"></div>
             </div>
         </div>
+        <div class="certificates container">
+            <div class="certificates__content">
+                <span>Сертификаты</span>
+                <h1>Lorem ipsum dolor</h1>
+                <div class="certificates__box">
+                    <div class="certificates__box-images">
+                        <img src="./source/img/cert.png">
+                        <img src="./source/img/cert.png">
+                        <img src="./source/img/cert.png">
+                        <img src="./source/img/cert.png">
+                    </div>
+                    <div class="background"></div>
+                </div>
+            </div>
+        </div>
+        <div class="blog container">
+            <div class="blog__content">
+                <span>Блог</span>
+                <div class="blog__content-top">
+                    <h1>Lorem ipsum dolor</h1>
+                    <button>
+                        Перейти на стрницу
+                        <i class="icon-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="blog__content-articles">
+                    <div class="article">
+                        <img src="./source/img/article1.png">
+                        <span>Lorem ipsum</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                        </p>
+                        <button>
+                            Читать
+                            <i class="icon-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="article">
+                        <img src="./source/img/article2.png">
+                        <span>Lorem ipsum</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                        </p>
+                        <button>
+                            Читать
+                            <i class="icon-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="article">
+                        <img src="./source/img/article3.png">
+                        <span>Lorem ipsum</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                        </p>
+                        <button>
+                            Читать
+                            <i class="icon-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq container">
+            <div class="faq__content">
+                <h1>Популярные вопросы</h1>
+                <div class="faq__content-background"></div>
+                <div class="faq__content-questions">
+                    <div class="question">
+                        <div class="question__title">
+                            <span>Как формируется цена на бухгалтерское обслуживание?</span>
+                            <i class="icon-dropdown-arrow"></i>
+                        </div>
+                        <div class="question__answer">
+                            <div class="question__answer-textbox">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id maximus sapien.
+                                Aliquam nec elit vel lectus condimentum semper eget vel lectus. Etiam quis arcu massa.
+                                Pellentesque vel sem vel purus pulvinar faucibus at pulvinar massa. Phasellus laoreet
+                                elementum efficitur. Nam suscipit cursus nunc, nec consequat lectus eleifend ut.
+                                Maecenas sed nulla vel libero fringilla commodo. Vestibulum ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere cubilia curae; Aliquam pulvinar tellus non enim
+                                molestie placerat. Nunc egestas risus sit amet placerat varius.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question__title">
+                            <span>Возможно ли заключить договор на фиксированную стоимость обслуживания?</span>
+                            <i class="icon-dropdown-arrow"></i>
+                        </div>
+                        <div class="question__answer">
+                            <div class="question__answer-textbox">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id maximus sapien.
+                                Aliquam nec elit vel lectus condimentum semper eget vel lectus. Etiam quis arcu massa.
+                                Pellentesque vel sem vel purus pulvinar faucibus at pulvinar massa. Phasellus laoreet
+                                elementum efficitur. Nam suscipit cursus nunc, nec consequat lectus eleifend ut.
+                                Maecenas sed nulla vel libero fringilla commodo. Vestibulum ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere cubilia curae; Aliquam pulvinar tellus non enim
+                                molestie placerat. Nunc egestas risus sit amet placerat varius.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question__title">
+                            <span>Можно ли к Вам обращаться за консультацией на постоянной основе и как это тарифицируется?</span>
+                            <i class="icon-dropdown-arrow"></i>
+                        </div>
+                        <div class="question__answer">
+                            <div class="question__answer-textbox">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id maximus sapien.
+                                Aliquam nec elit vel lectus condimentum semper eget vel lectus. Etiam quis arcu massa.
+                                Pellentesque vel sem vel purus pulvinar faucibus at pulvinar massa. Phasellus laoreet
+                                elementum efficitur. Nam suscipit cursus nunc, nec consequat lectus eleifend ut.
+                                Maecenas sed nulla vel libero fringilla commodo. Vestibulum ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere cubilia curae; Aliquam pulvinar tellus non enim
+                                molestie placerat. Nunc egestas risus sit amet placerat varius.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question__title">
+                            <span>Помогаете ли Вы оптимизировать налоги?</span>
+                            <i class="icon-dropdown-arrow"></i>
+                        </div>
+                        <div class="question__answer">
+                            <div class="question__answer-textbox">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id maximus sapien.
+                                Aliquam nec elit vel lectus condimentum semper eget vel lectus. Etiam quis arcu massa.
+                                Pellentesque vel sem vel purus pulvinar faucibus at pulvinar massa. Phasellus laoreet
+                                elementum efficitur. Nam suscipit cursus nunc, nec consequat lectus eleifend ut.
+                                Maecenas sed nulla vel libero fringilla commodo. Vestibulum ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere cubilia curae; Aliquam pulvinar tellus non enim
+                                molestie placerat. Nunc egestas risus sit amet placerat varius.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <div class="question__title">
+                            <span>Сообщаете ли Вы каких документов не хватает и что необходимо предоставить?</span>
+                            <i class="icon-dropdown-arrow"></i>
+                        </div>
+                        <div class="question__answer">
+                            <div class="question__answer-textbox">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id maximus sapien.
+                                Aliquam nec elit vel lectus condimentum semper eget vel lectus. Etiam quis arcu massa.
+                                Pellentesque vel sem vel purus pulvinar faucibus at pulvinar massa. Phasellus laoreet
+                                elementum efficitur. Nam suscipit cursus nunc, nec consequat lectus eleifend ut.
+                                Maecenas sed nulla vel libero fringilla commodo. Vestibulum ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere cubilia curae; Aliquam pulvinar tellus non enim
+                                molestie placerat. Nunc egestas risus sit amet placerat varius.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="consult container">
+            <div class="consult__content">
+                <div class="consult__content-background"></div>
+                <div class="consult__content-textbox">
+                    <h1>
+                        Запишитесь на бесплатную консультацию
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+                    <button>Наши контакты</button>
+                </div>
+                <div class="consult__content-form">
+                    <form action="" method="POST">
+                        <div class="form__wrapper">
+                            <span>Имя</span>
+                            <input type="text" name="name">
+                            <span>Телефон</span>
+                            <input type="text" name="mobilePhone">
+                            <span>Вопрос или описание проблемы</span>
+                            <textarea name="problem"></textarea>
+                            <div class="agreement">
+                                <input type="checkbox" name="agree" checked>
+                                <span>
+                                    Я согласен(а) с <a href="#">политикой конфиденциальности</a>
+                                </span>
+                            </div>
+                            <input id="consult-send" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__content container">
+                <div class="top-part">
+                    <div class="footer__content-list footer__content-services">
+                        <span>Услуги</span>
+                        <a href="#">Бухгалтерский учёт</a>
+                        <a href="#">Восстановление отчётности</a>
+                        <a href="#">Нулевая отчётность</a>
+                        <a href="#">Зарплата и кадры</a>
+                        <a href="#">Консультация бухгалтера</a>
+                        <a href="#">Регистрационные услуги</a>
+                    </div>
+                    <div class="footer__content-list footer__content-company">
+                        <span>Компания</span>
+                        <a href="#">О нас</a>
+                        <a href="#">Тарифы</a>
+                        <a href="#">Блог</a>
+                        <a href="#">Контакты</a>
+                        <a href="#">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__content-vacancies">
+                        <span>Вакансии</span>
+                        <p>
+                            Если Вас интересует работа в компании «НеГа Консалтинг», просим предварительно
+                            направить свое резюме и предложения по заработной плате менеджеру по персоналу
+                            на почту: <a href="mailto:job@negacons.ru">job@negacons.ru</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <hr>
+                    <div class="footer__content-end">
+                        <span>© 1999-2022 ООО «НеГа Консалтинг» | Бухгалтерские услуги</span>
+                        <img src="./source/icons/logo.svg">
+                        <span>Разработка сайта | terexov</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <? require_once (__DIR__.'/components/scripts.php')?>
 </body>
