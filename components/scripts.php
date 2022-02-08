@@ -4,3 +4,4 @@
 <script src="../js/swiper.js"></script>
 <script src="../js/range_progress.js"></script>
 <script src="../js/calculator.js"></script>
+<script src="../js/consult_form.js"></script>

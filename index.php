@@ -829,7 +829,7 @@
                     <button>Наши контакты</button>
                 </div>
                 <div class="consult__content-form">
-                    <form action="" method="POST">
+                    <form id="contact-form">
                         <div class="form__wrapper">
                             <span>Имя</span>
                             <input type="text" name="name">
