@@ -355,6 +355,35 @@ $screen2: 360px;
 
 .info {
   height: 720px;
+  position: relative;
+  .upper-images {
+    position: absolute;
+    width: 106%;
+    display: flex;
+    right: -3%;
+    top: 20%;
+    padding: 0 30px;
+    justify-content: space-between;
+    @media (max-width: 1230px) {
+      display: none;
+    }
+  }
+  .bottom-images {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    white-space: nowrap;
+    @media (max-width: $screen1) {
+      img {
+        transform: scale(0.7);
+      }
+    }
+    .banner__image_dotchart {
+      margin-top: 40px;
+    }
+  }
 }
 
 .banner {
@@ -398,33 +427,6 @@ $screen2: 360px;
       &:hover {
         border-color: $highlightColor;
       }
-    }
-  }
-  &__image  {
-    &_linechart {
-      top: -340px;
-      right: 27px;
-      padding: 5px;
-      position: relative;
-    }
-    &_circlechart {
-      position: relative;
-      top: -133px;
-      right: 100px;
-    }
-    &_dotchart {
-      position: relative;
-      top: -100px;
-      right: 50px;
-    }
-    &_barchart {
-      top: -133px;
-      position: relative;
-    }
-    &_histogram {
-      position: relative;
-      top: -665px;
-      left: 1197px;
     }
   }
 }

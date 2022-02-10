@@ -199,11 +199,17 @@
                     </div>
                 </div>
             </div>
-            <img class="banner__image_linechart" src="./source/img/linechart.png">
-            <img class="banner__image_circlechart" src="./source/img/circlechart.png">
-            <img class="banner__image_dotchart" src="./source/img/dotchart.png">
-            <img class="banner__image_barchart" src="./source/img/barchart.png">
-            <img class="banner__image_histogram" src="./source/img/histogram.png">
+            <div class="upper-images">
+                <img class="banner__image banner__image_linechart" src="./source/img/linechart.png">
+                <img class="banner__image banner__image_histogram" src="./source/img/histogram.png">
+            </div>
+            <div class="bottom-images">
+                <div>
+                    <img class="banner__image banner__image_circlechart" src="./source/img/circlechart.png">
+                    <img class="banner__image banner__image_dotchart" src="./source/img/dotchart.png">
+                    <img class="banner__image banner__image_barchart" src="./source/img/barchart.png">
+                </div>
+            </div>
         </div>
         <div class="company-info container">
             <div class="company-info__content">

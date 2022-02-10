@@ -436,6 +436,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .info {
   height: 720px;
+  position: relative;
+}
+.info .upper-images {
+  position: absolute;
+  width: 106%;
+  display: flex;
+  right: -3%;
+  top: 20%;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+@media (max-width: 1230px) {
+  .info .upper-images {
+    display: none;
+  }
+}
+.info .bottom-images {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .info .bottom-images img {
+    transform: scale(0.7);
+  }
+}
+.info .bottom-images .banner__image_dotchart {
+  margin-top: 40px;
 }
 
 .banner {
@@ -477,31 +508,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .banner__buttonbox button:hover {
   border-color: #0c7dff;
-}
-.banner__image_linechart {
-  top: -340px;
-  right: 27px;
-  padding: 5px;
-  position: relative;
-}
-.banner__image_circlechart {
-  position: relative;
-  top: -133px;
-  right: 100px;
-}
-.banner__image_dotchart {
-  position: relative;
-  top: -100px;
-  right: 50px;
-}
-.banner__image_barchart {
-  top: -133px;
-  position: relative;
-}
-.banner__image_histogram {
-  position: relative;
-  top: -665px;
-  left: 1197px;
 }
 
 .company-info {
