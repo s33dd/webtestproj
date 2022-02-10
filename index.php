@@ -21,12 +21,12 @@
         </header>
         <div class="menu">
             <nav class="menu__navigation container">
-                <a class="menu__navigation-link logo" href="#">
+                <a class="menu__link logo" href="#">
                     <img src="source/icons/logo.svg">
                 </a>
                 <div class="menu__navigation-links">
                     <div class="menu__dropdown">
-                        <span class="menu__navigation-link">
+                        <span class="menu__link">
                             Услуги
                             <i class="icon-dropdown-arrow menu__dropdown-icon menu__dropdown-icon_minimized"></i>
                             <i class="icon-dropdown-arrow-up menu__dropdown-icon menu__dropdown-icon_deployed"></i>
@@ -90,14 +90,97 @@
                             </div>
                         </div>
                     </div>
-                    <a class="menu__navigation-link">Тарифы</a>
-                    <a class="menu__navigation-link">Блог</a>
-                    <a class="menu__navigation-link">О нас</a>
-                    <a class="menu__navigation-link">Контакты</a>
+                    <a class="menu__link">Тарифы</a>
+                    <a class="menu__link">Блог</a>
+                    <a class="menu__link">О нас</a>
+                    <a class="menu__link">Контакты</a>
                 </div>
                 <div class="menu__navigation-number">
                     <i class="icon-phone menu__icon"></i>
                     <a href="tel:+78005553535">8 (800) 555-35-35</a>
+                </div>
+            </nav>
+            <nav class="menu__mobile">
+                <div class="menu__mobile-control container">
+                    <a class="logo" href="#">
+                        <img src="source/icons/logo.svg">
+                    </a>
+                    <div class="menu__burger">
+                        <div class="burger">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__mobile-links">
+                    <a class="menu__link">Главная</a>
+                    <div class="menu__dropdown">
+                        <span class="menu__link dropdown-toggler">
+                            Услуги
+                            <i class="icon-dropdown-arrow menu__dropdown-icon"></i>
+                        </span>
+                        <div class="menu__dropdown-mobile">
+                            <div class="menu__dropdown-content">
+                                <div class="menu__dropdown-item">
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_chart">
+                                        <i class="icon-chart-line"></i>
+                                    </div>
+                                    <div class="menu__dropdown-category">
+                                        <span>Бухгалтерский учёт</span>
+                                        <p>Сопровождение бухгалтерии и отдела кадров предприятий</p>
+                                    </div>
+                                </div>
+                                <div class="menu__dropdown-item">
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_money">
+                                        <i class="icon-money"></i>
+                                    </div>
+                                    <div class="menu__dropdown-category">
+                                        <span>Зарплата и кадры</span>
+                                        <p>Кадровое делопроизводство с нуля, учет и начисление зарплаты</p>
+                                    </div>
+                                </div>
+                                <div class="menu__dropdown-item">
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_arrow">
+                                        <i class="icon-round-arrow"></i>
+                                    </div>
+                                    <div class="menu__dropdown-category">
+                                        <span>Восстановление учёта и отчётности</span>
+                                        <p>Восстановим бухгалтерский учёт и отчетность в любом состоянии</p>
+                                    </div>
+                                </div>
+                                <div class="menu__dropdown-item">
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_question">
+                                        <i class="icon-question"></i>
+                                    </div>
+                                    <div class="menu__dropdown-category">
+                                        <span>Консультация бухгалтера</span>
+                                        <p>Консультация главного бухгалтера для руководителей предприятий</p>
+                                    </div>
+                                </div>
+                                <div class="menu__dropdown-item">
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_tablet">
+                                        <i class="icon-paper-tablet"></i>
+                                    </div>
+                                    <div class="menu__dropdown-category">
+                                        <span>Нулевая отчётность</span>
+                                        <p>Подготовим и сдадим нулевую отчетность в ИФНС и ПФР</p>
+                                    </div>
+                                </div>
+                                <div class="menu__dropdown-item">
+                                    <div class="menu__dropdown-item-icon menu__dropdown-icon_check">
+                                        <i class="icon-check"></i>
+                                    </div>
+                                    <div class="menu__dropdown-category">
+                                        <span>Регистрация ООО</span>
+                                        <p>Регистрация, внесение изменений и ликвидация ООО с внесением в ЕГРЮЛ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="menu__link">Тарифы</a>
+                    <a class="menu__link">Блог</a>
+                    <a class="menu__link">О нас</a>
+                    <a class="menu__link">Контакты</a>
                 </div>
             </nav>
         </div>

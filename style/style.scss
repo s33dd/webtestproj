@@ -59,6 +59,12 @@ $screen2: 360px;
 }
 
 //---------------------------
+@media (max-width: $screen1) {
+  body.lock {
+    overflow: hidden;
+  }
+}
+
 .lower {
   margin-top: 20px;
 }
@@ -75,7 +81,7 @@ $screen2: 360px;
   max-width: $maxContentWidth + 20px;
   width: 100%;
   margin: 0 auto;
-  padding: 0px 12px;
+  padding: 0px 20px;
   @media (max-width: $screen1 + 20px) {
     max-width: $screen1;
   }
@@ -104,7 +110,7 @@ $screen2: 360px;
     }
   }
   &__icon {
-    @include icon($highlightColor, 12px, 20px, middle);
+    @include icon($highlightColor, 0, 20px, middle);
   }
 }
 
@@ -116,6 +122,13 @@ $screen2: 360px;
   font-weight: 600;
   font-size: 16px;
   font-family: $standardFont;
+  &__link {
+    color: $mainFontColor;
+  }
+  &__link:hover {
+    cursor: pointer;
+    color: $highlightColor;
+  }
   &__dropdown {
     position: relative;
     &-icon {
@@ -228,13 +241,6 @@ $screen2: 360px;
         color: $highlightColor;
       }
     }
-    &-link {
-      color: $mainFontColor;
-    }
-    &-link:hover {
-      cursor: pointer;
-      color: $highlightColor;
-    }
     &-links {
       margin: auto;
       display: flex;
@@ -249,7 +255,102 @@ $screen2: 360px;
   &__icon {
     @include icon($highlightColor, 15px, 20px, middle);
   }
-
+  &__mobile {
+    display: none;
+    &-control {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  @media (max-width: $screen1) {
+    &__burger {
+      position: relative;
+      background-color: rgba($highlightColor, 0.1);
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+    }
+    .burger {
+      display: flex;
+      width: 24px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &.active {
+        &::before {
+          transform: rotate(45deg);
+          top: 7px;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 7px;
+        }
+        span {
+          transform: scale(0);
+        }
+      }
+      &::before, &::after {
+        content: '';
+        background-color: $highlightColor;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        transition: all 300ms;
+      }
+      &::after {
+        bottom: 0;
+      }
+      span {
+        background-color: $highlightColor;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 7px;
+        transition: all 300ms;
+      }
+    }
+    &__link {
+      margin-bottom: 40px;
+    }
+    &__mobile {
+      display: block;
+      width: 100%;
+      &-links {
+        &_active {
+          display: flex;
+        }
+        z-index: 10;
+        position: absolute;
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 24px;
+        width: 100%;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        background-color: $mainBkgColor;
+      }
+    }
+    &__dropdown {
+      margin-bottom: 40px;
+      &-mobile {
+        display: none;
+        &_active {
+          display: block;
+        }
+      }
+      &-content {
+        box-shadow: none;
+      }
+    }
+    &__navigation {
+      display: none;
+    }
+  }
 }
 
 .info {
