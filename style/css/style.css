@@ -285,6 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: auto;
   left: -360%;
+  z-index: 10;
 }
 .menu__dropdown-category {
   width: 249px;

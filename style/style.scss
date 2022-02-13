@@ -203,6 +203,7 @@ $screen3: 360px;
       position: absolute;
       width: auto;
       left: -360%;
+      z-index: 10;
     }
     &-category {
       width: 249px;
