@@ -21,7 +21,8 @@ $maxWidth: 1920px;
 $minWidth: 320px;
 $maxContentWidth: 1419px;
 $screen1: 1024px;
-$screen2: 360px;
+$screen2: 760px;
+$screen3: 360px;
 
 //Шаблоны
 %span-style {
@@ -59,6 +60,14 @@ $screen2: 360px;
 }
 
 //---------------------------
+.lock {
+  overflow: hidden;
+}
+
+.opened {
+  height: 100%;
+}
+
 .lower {
   margin-top: 20px;
 }
@@ -72,15 +81,18 @@ $screen2: 360px;
 }
 
 .container {
-  max-width: $maxContentWidth + 20px;
+  max-width: $maxContentWidth + 40px;
   width: 100%;
   margin: 0 auto;
   padding: 0px 20px;
-  @media (max-width: $screen1 + 20px) {
-    max-width: $screen1;
+  @media (max-width: $screen1) {
+    max-width: 768px + 40px;
   }
-  @media (max-width: $screen2 + 20px) {
-    max-width: $screen2;
+  @media (max-width: $screen2) {
+    max-width: $screen2 + 40px;
+  }
+  @media (max-width: $screen3) {
+    max-width: 312px + 40px;
   }
 }
 
@@ -94,6 +106,9 @@ $screen2: 360px;
   align-items: center;
   font-weight: 600;
   font-size: 14px;
+  @media (max-width: $screen2) {
+    display: none;
+  }
   &__content {
     width: 100%;
     display: flex;
@@ -116,8 +131,27 @@ $screen2: 360px;
   font-weight: 600;
   font-size: 16px;
   font-family: $standardFont;
+  background-color: $mainBkgColor;
+  width: 100%;
   &__link {
     color: $mainFontColor;
+  }
+  &__contact {
+    font-size: 14px;
+    color: $mainFontColor;
+    margin-bottom: 24px;
+    &_number {
+      font-size: 18px;
+      a {
+        color: $highlightColor;
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+    &:hover {
+      color: $highlightColor;
+    }
   }
   &__link:hover {
     cursor: pointer;
@@ -184,6 +218,9 @@ $screen2: 360px;
       display: grid;
       margin-top: 16px;
       grid-template-columns: 1fr 1fr;
+      @media (max-width: $screen2) {
+        grid-template-columns: 1fr;
+      }
       width: 716px;
       font-size: 16px;
       font-weight: 600;
@@ -197,6 +234,12 @@ $screen2: 360px;
       display: flex;
       border-radius: 20px;
       align-items: center;
+      @media (max-width: $screen2) {
+        max-width: 70%;
+      }
+      @media (max-width: $screen3) {
+        max-width: 45%;
+      }
       &:hover {
         background-color: $divFiller;
         color: $highlightColor;
@@ -249,100 +292,113 @@ $screen2: 360px;
   &__icon {
     @include icon($highlightColor, 15px, 20px, middle);
   }
-  &__mobile {
+  @media (max-width: $screen1) {
     display: none;
+  }
+  &__mobile {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: $standardFont;
+    background-color: $mainBkgColor;
+    display: none;
+    padding: 20px 0;
     &-control {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-  }
-  @media (max-width: $screen1) {
-    &__burger {
-      position: relative;
-      background-color: rgba($highlightColor, 0.1);
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-    }
-    .burger {
-      display: flex;
-      width: 24px;
-      height: 16px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      &.active {
-        &::before {
-          transform: rotate(45deg);
-          top: 7px;
-        }
-        &::after {
-          transform: rotate(-45deg);
-          bottom: 7px;
-        }
-        span {
-          transform: scale(0);
-        }
-      }
-      &::before, &::after {
-        content: '';
-        background-color: $highlightColor;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        transition: all 300ms;
-      }
-      &::after {
-        bottom: 0;
-      }
-      span {
-        background-color: $highlightColor;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        top: 7px;
-        transition: all 300ms;
-      }
-    }
-    &__link {
-      margin-bottom: 40px;
-    }
-    &__mobile {
+    @media (max-width: $screen1) {
       display: block;
-      width: 100%;
-      &-links {
-        &_active {
-          display: flex;
-        }
-        z-index: 10;
-        position: absolute;
-        padding-left: 20px;
-        padding-top: 20px;
-        font-size: 24px;
-        width: 100%;
+    }
+    width: 100%;
+    &-links {
+      &_active {
         height: auto;
-        display: none;
-        flex-direction: column;
-        background-color: $mainBkgColor;
       }
+      .links-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 0;
+      }
+      padding-left: 20px;
+      font-size: 24px;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: $mainBkgColor;
     }
-    &__dropdown {
-      margin-bottom: 40px;
-      &-mobile {
-        display: none;
-        &_active {
-          display: block;
+    .menu {
+      &__burger {
+        position: relative;
+        background-color: rgba($highlightColor, 0.1);
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        .burger {
+          display: flex;
+          width: 24px;
+          height: 16px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          &.active {
+            &::before {
+              transform: rotate(45deg);
+              top: 7px;
+            }
+            &::after {
+              transform: rotate(-45deg);
+              bottom: 7px;
+            }
+            span {
+              transform: scale(0);
+            }
+          }
+          &::before, &::after {
+            content: '';
+            background-color: $highlightColor;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            transition: all 300ms;
+          }
+          &::after {
+            bottom: 0;
+          }
+          span {
+            background-color: $highlightColor;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 7px;
+            transition: all 300ms;
+          }
         }
       }
-      &-content {
-        box-shadow: none;
+      &__link {
+        margin-bottom: 40px;
+      }
+      &__dropdown {
+        margin-bottom: 40px;
+        &-mobile {
+          display: none;
+          &_active {
+            display: block;
+          }
+        }
+        &-content {
+          box-shadow: none;
+        }
       }
     }
-    &__navigation {
-      display: none;
+    @media (max-width: $screen2) {
+      position: fixed;
+      overflow: auto;
+      z-index: 10;
+      width: 100%;
     }
   }
 }
@@ -350,6 +406,9 @@ $screen2: 360px;
 .info {
   height: 720px;
   position: relative;
+  @media (max-width: $screen2) {
+    margin-top: 70px;
+  }
   .upper-images {
     position: absolute;
     width: 106%;
@@ -367,11 +426,17 @@ $screen2: 360px;
     justify-content: center;
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: 97%;
     white-space: nowrap;
     @media (max-width: $screen1) {
-      img {
-        transform: scale(0.7);
+      transform: scale(0.7);
+    }
+    @media (max-width: $screen2) {
+      .banner__image {
+        display: none;
+      }
+      .banner__image_single {
+        display: block;
       }
     }
     .banner__image_dotchart {
@@ -392,7 +457,7 @@ $screen2: 360px;
     -4px 4px 4px -1px rgb(230, 234, 245);
     background-color: $divFiller;
     border-radius: 40px;
-    width: 1340px;
+    width: 100%;
     height: 464px;
     display: flex;
     flex-direction: column;
@@ -401,15 +466,32 @@ $screen2: 360px;
     h1 {
       font-size: 50px;
       font-weight: 600;
+      text-align: center;
     }
     p {
       font-size: 18px;
       line-height: 30px;
       text-align: center;
       color: $subtextColor;
-      width: 595px;
+      max-width: 595px;
       padding: 28px;
       font-weight: 400;
+    }
+    @media (max-width: $screen1) {
+      h1 {
+        font-size: 35px;
+      }
+    }
+    @media (max-width:$screen2) {
+      height: auto;
+    }
+    @media (max-width: $screen3) {
+      h1 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
   }
   &__buttonbox {
@@ -422,6 +504,21 @@ $screen2: 360px;
         border-color: $highlightColor;
       }
     }
+    @media (max-width: $screen2) {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__image_single {
+    display: none;
+    max-width: 240px;;
+    @media (max-width: $screen2) {
+      display: block;
+      transform: scale(1.5);
+      margin-top: 35px;
+    }
   }
 }
 
@@ -432,7 +529,8 @@ $screen2: 360px;
   justify-content: center;
   font-family: $standardFont;
   &__content {
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -451,14 +549,46 @@ $screen2: 360px;
         color: $highlightColor;
       }
     }
+    @media (max-width: $screen1) {
+      span {
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 38px;
+        max-width: 630px;
+      }
+    }
+    @media (max-width: $screen3) {
+      span {
+        font-size: 12px;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+  }
+  .switcher-wrapper {
+    @media (max-width: $screen2) {
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+    }
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   &__switcher {
     margin-top: 75px;
     margin-bottom: 75px;
     max-width: 1134px;
+    display: flex;
     .active {
       color: $highlightColor !important;
       background-color: $divFiller !important;
+    }
+    @media (max-width: $screen2) {
+      margin: 0;
     }
   }
   &__button {
@@ -470,6 +600,9 @@ $screen2: 360px;
     color: $mainFontColor;
     &:hover {
       color: $highlightColor;
+    }
+    @media (max-width: $screen1) {
+      font-size: 14px;
     }
   }
   &__contentbox {
@@ -508,6 +641,19 @@ $screen2: 360px;
         font-weight: normal;
         max-width: 500px;
       }
+      @media (max-width: $screen3) {
+        span {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1044px) {
+    &__imagebox {
+      display: none;
     }
   }
 }
@@ -541,6 +687,9 @@ $screen2: 360px;
     &-details {
       display: flex;
       justify-content: space-between;
+      @media (max-width: $screen1) {
+        flex-direction: column;
+      }
       &-box {
         max-width: 600px;
         button {
@@ -553,6 +702,12 @@ $screen2: 360px;
           }
           &:hover {
             background-color: rgb(232, 242, 254);
+          }
+        }
+        @media (max-width: $screen3) {
+          button {
+            width: 171px;
+            height: 51px;
           }
         }
       }
@@ -568,17 +723,25 @@ $screen2: 360px;
             color: $subtextColor;
             line-height: 28px;
           }
+          @media (max-width: $screen3) {
+            p {
+              font-size: 14px;
+            }
+          }
         }
         &-nav {
           display: flex;
           justify-content: flex-end;
+          .slider__buttonbox {
+            display: flex;
+            justify-content: space-between;
+            width: 132px;
+            margin-top: 24px;
+          }
           button {
             background-color: $mainBkgColor;
             height: 56px;
             width: 56px;
-            border-radius: 50%;
-            margin-top: 11px;
-            margin-left: 20px;
             @include border(1px, solid, $borderColor, 50%);
             &:hover {
               background-color: $buttonHighlight;
@@ -586,7 +749,7 @@ $screen2: 360px;
           }
           .pagination {
             @extend %pagination-style;
-            margin-right: 83px;
+            margin: auto;
           }
           .icon {
             @include icon($highlightColor, 0, 16px, none);
@@ -594,14 +757,43 @@ $screen2: 360px;
         }
       }
     }
+    @media (max-width: $screen3) {
+      span {
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
   }
 }
 
-.photo-slider {
-  height: 324px;
+.photo-slider-box {
   margin-top: 80px;
   .photo-slide {
     border-radius: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-slide {
+    &::after{
+      content: '';
+      display: block;
+      padding-bottom: 75%;
+    }
+  }
+  @media (max-width: $screen1) {
+    .swiper-slide:last-child {
+      display: none;
+    }
+  }
+  @media (max-width: $screen3) {
+    .swiper-slide:nth-child(5) {
+      display: none;
+    }
   }
 }
 
@@ -638,6 +830,12 @@ $screen2: 360px;
       margin-bottom: 120px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      @media (max-width: $screen1) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: $screen2) {
+        grid-template-columns: 1fr;
+      }
       grid-gap: 24px 65px;
       width: 100%;
     }
@@ -693,6 +891,15 @@ $screen2: 360px;
       p {
         max-width: 340px;
       }
+      @media (max-width: $screen1) {
+        span {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+          max-width: 270px;
+        }
+      }
       &_count:hover {
         border-color: rgb(245, 129, 140);
       }
@@ -733,6 +940,19 @@ $screen2: 360px;
         }
       }
     }
+    @media (max-width: $screen3) {
+      span {
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 34px;
+      }
+      p {
+        font-size: 14px;
+        left: 25px;
+      }
+    }
   }
 }
 
@@ -740,9 +960,15 @@ $screen2: 360px;
   font-family: $standardFont;
   margin-bottom: 120px;
   max-height: 535px;
+  @media (max-width: $screen1) {
+    max-height: none;
+  }
   &__content {
     display: flex;
     width: 100%;
+    @media (max-width: $screen1) {
+      flex-direction: column;
+    }
     &-textbox {
       margin-top: 64px;
       max-width: 527px;
@@ -762,22 +988,44 @@ $screen2: 360px;
         line-height: 28px;
         color: $subtextColor;
       }
+      @media (max-width: $screen3) {
+        span {
+          font-size: 12px;
+        }
+        h1 {
+          font-size: 24px;
+          line-height: 34px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
     }
     &-contact {
       margin-left: 123px;
+      @media (max-width: $screen1) {
+        margin-left: 0;
+        margin-top: 60px;
+      }
       width: 100%;
       background-color: $divFiller;
       border-radius: 40px;
       display: flex;
       flex-direction: column;
       .steps {
-        margin: 51px 60px 60px;
+        padding: 51px 60px 60px;
         color: rgb(182, 216, 255);
         display: flex;
         width: 100%;
-        max-width: 650px;
+        @media (max-width: $screen2) {
+          flex-wrap: wrap;
+        }
         .step {
           width: 25%;
+          @media (max-width: $screen2) {
+            width: 50%;
+          }
           transition: color 300ms linear;
           &__num {
             font-family: "Source Sans Pro", sans-serif;
@@ -794,6 +1042,10 @@ $screen2: 360px;
           }
           &__description {
             max-width: 149px;
+            @media (max-width: $screen2) {
+              font-size: 12px;
+              max-width: 112px;
+            }
           }
           &_active {
             color: $highlightColor !important;
@@ -817,6 +1069,9 @@ $screen2: 360px;
         font-weight: 600;
         font-size: 20px;
         line-height: 32px;
+        @media (max-width: $screen2) {
+          margin-right: 60px;
+        }
       }
       p {
         color: $subtextColor;
@@ -826,6 +1081,9 @@ $screen2: 360px;
         max-width: 500px;
         margin-left: 60px;
         margin-bottom: 39px;
+        @media (max-width: $screen2) {
+          margin-right: 60px;
+        }
       }
       button {
         margin-bottom: 60px;
@@ -849,6 +1107,9 @@ $screen2: 360px;
     position: relative;
     bottom: 180px;
     left: 320px;
+    @media (max-width: $screen1) {
+      display: none;
+    }
   }
 }
 
@@ -858,8 +1119,15 @@ $screen2: 360px;
   &__content {
     display: flex;
     width: 100%;
+    @media (max-width: 1400px) {
+      flex-direction: column-reverse;
+    }
     &-calcbox {
       width: 50%;
+      @media (max-width: 1400px) {
+        width: 100%;
+        margin-top: 60px;
+      }
       border-radius: 40px;
       background-color: $divFiller;
       padding: 34px 51px 46px;
@@ -889,6 +1157,28 @@ $screen2: 360px;
             @include border(1px, solid, $borderColor, 8px);
             &:hover {
               border-color: $highlightColor;
+            }
+          }
+          @media (max-width: $screen2) {
+            flex-wrap: wrap;
+            button{
+              flex-grow: 1;
+              padding: 16px;
+              margin-top: 12px;
+            }
+            .income {
+              order: 3;
+            }
+            .none {
+              width: 100%;
+            }
+            .simple {
+              width: 50%;
+            }
+          }
+          @media (max-width: $screen3) {
+            button {
+              font-size: 12px;
             }
           }
         }
@@ -967,28 +1257,17 @@ $screen2: 360px;
           }
           .ticks {
             margin-top: 13px;
-            display: flex;
-            justify-content: space-between;
             span {
               color: rgb(189, 197, 218);
               font-size: 12px;
               font-weight: 500;
+              position: absolute;
             }
-            .main {
-              display: flex;
-              justify-content: space-between;
-              width: 100%;
-              margin-left: 42px;
-              margin-right: 24px;
-              .tick {
-                width: 4px;
-                height: 4px;
-                border-radius: 50%;
-                background-color: rgb(189, 197, 218);
-              }
-            }
-            .end {
-              margin-left: auto;
+            .tick {
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: rgb(189, 197, 218);
             }
             .large {
               font-weight: 600;
@@ -1036,11 +1315,28 @@ $screen2: 360px;
             @include border(1px, solid, $subtextColor, 8px);
           }
         }
+        @media (max-width: $screen2) {
+          flex-direction: column;
+          button {
+            margin-top: 40px;
+          }
+        }
+        @media (max-width: $screen3) {
+          .total {
+            .answer {
+              font-size: 24px;
+            }
+          }
+        }
       }
     }
     &-textbox {
       width: 50%;
       padding-left: 61px;
+      @media (max-width: $screen1) {
+        width: 100%;
+        padding-left: 0;
+      }
       margin-top: 64px;
       span {
         @extend %span-style;
@@ -1059,6 +1355,19 @@ $screen2: 360px;
         font-weight: 400;
         line-height: 28px;
         max-width: 500px;
+      }
+      @media (max-width: $screen3) {
+        span {
+          font-size: 12px;
+        }
+        h1 {
+          font-size: 24px;
+          line-height: 34px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
       }
     }
   }
@@ -1094,9 +1403,25 @@ $screen2: 360px;
         color: $subtextColor;
         max-width: 500px;
       }
+      @media (max-width: $screen3) {
+        span {
+          font-size: 12px;
+        }
+        h1 {
+          font-size: 24px;
+          line-height: 34px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
     }
     &-reviewbox {
       width: 100%;
+      @media (max-width: $screen2) {
+        display: none;
+      }
       .swiper-wrapper {
         padding-bottom: 60px;
         padding-top: 60px;
@@ -1146,6 +1471,84 @@ $screen2: 360px;
 
         }
       }
+      &_mobile {
+        display: none;
+        .review {
+          padding: 32px 32px;
+          text-align: left;
+          max-width: 678px;
+          .body__wrapper {
+            border-radius: 25px;
+            @extend %shadow;
+            padding: 20px 32px;
+          }
+          p {
+            max-width: 560px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 36px;
+            color: $subtextColor;
+          }
+          .name {
+            color: $mainFontColor;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+          }
+          .company {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 28px;
+            color: $subtextColor;
+          }
+          &__bottom {
+            display: flex;
+            &-img {
+              background-color: $highlightColor;
+              margin-right: 24px;
+              height: 50px;
+              width: 50px;
+              border-radius: 8px;
+            }
+            &-text {
+              display: flex;
+              flex-direction: column;
+            }
+
+          }
+          @media (max-width: $screen3) {
+            p {
+              font-size: 14px;
+              line-height: 25px;
+            }
+            .name {
+              font-size: 16px;
+            }
+            .company {
+              font-size: 12px;
+              line-height: normal;
+            }
+          }
+        }
+        .swiper-wrapper {
+          padding-bottom: 60px;
+          padding-top: 60px;
+          max-height: 100%;
+          height: 100%;
+          display: flex;
+          .swiper-slide {
+            width: auto;
+            flex-shrink: 0;
+            display: block;
+            height: 100%;
+            max-height: 100%;
+          }
+        }
+        @media (max-width: $screen2) {
+          display: block;
+        }
+      }
     }
     .reviewbox-pagination {
       @extend %pagination-style;
@@ -1174,6 +1577,19 @@ $screen2: 360px;
       margin-bottom: 60px;
       margin-top: 40px;
     }
+    @media (max-width: $screen3) {
+      span {
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 34px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
   }
   &__box {
     width: 100%;
@@ -1182,6 +1598,27 @@ $screen2: 360px;
     justify-content: center;
     &-images {
       width: 100%;
+      @media (max-width: $screen1) {
+        width: 107%;
+        img {
+          transform: scale(0.9);
+        }
+      }
+      @media (max-width: $screen2) {
+        margin-right: 100px;
+        margin-left: 100px;
+        &>div:nth-child(2n){
+          display: none;
+        }
+      }
+      @media (max-width: 410px) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 40px;
+        img {
+          max-width: 142px;
+        }
+      }
       display: flex;
       margin-top: 40px;
       max-width: 1076px;
@@ -1192,7 +1629,11 @@ $screen2: 360px;
       background-color: $divFiller;
       width: 100%;
       max-width: 754px;
-      height: 355px;
+      max-height: 355px;
+      @media (max-width: 410px) {
+        max-height: 269px;
+      }
+      height: 100%;
       border-radius: 40px;
       z-index: -1;
       top: 0;
@@ -1207,12 +1648,21 @@ $screen2: 360px;
     width: 100%;
     span {
       @extend %span-style;
+      @media (max-width: $screen3) {
+        font-size: 12px;
+      }
     }
     &-top {
       display: flex;
       justify-content: space-between;
       margin-top: 35px;
       margin-bottom: 60px;
+      @media (max-width: $screen2) {
+        flex-direction: column;
+        button {
+          margin-top: 20px;
+        }
+      }
       h1 {
         font-weight: 600;
         color: $mainFontColor;
@@ -1230,6 +1680,12 @@ $screen2: 360px;
           @include icon($highlightColor, 12px, 100%, middle);
         }
       }
+      @media (max-width: $screen3) {
+        h1 {
+          font-size: 24px;
+          line-height: 34px;
+        }
+      }
     }
     &-articles {
       display: flex;
@@ -1238,6 +1694,8 @@ $screen2: 360px;
         max-width: 444px;
         padding: 32px;
         border-radius: 25px;
+        display: flex;
+        flex-direction: column;
         img {
           max-width: 380px;
           max-height: 290px;
@@ -1263,10 +1721,11 @@ $screen2: 360px;
           visibility: hidden;
           font-weight: 600;
           font-size: 16px;
+          max-width: 85px;
           color: $highlightColor;
           background-color: $mainBkgColor;
           i {
-            @include icon($highlightColor, 10px, 16px, middle);
+            @include icon($highlightColor, 10px, 11px, middle);
           }
         }
         &:hover {
@@ -1278,6 +1737,29 @@ $screen2: 360px;
           button {
             visibility: visible;
           }
+        }
+        @media (max-width: $screen1) {
+          &:last-child {
+            display: none;
+          }
+          img {
+            max-width: 314px;
+            max-height: 240px;
+          }
+          span {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+            max-width: 282px;
+          }
+          width: 50%;
+        }
+        @media (max-width: $screen2) {
+          &:not(&:first-child){
+            display: none;
+          }
+          width: 100%;
         }
       }
     }
@@ -1299,6 +1781,12 @@ $screen2: 360px;
       line-height: 48px;
       color: $mainFontColor;
       margin-bottom: 60px;
+    }
+    @media (max-width: $screen3) {
+      h1 {
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
     &-background {
       background-color: $divFiller;
@@ -1375,12 +1863,19 @@ $screen2: 360px;
     width: 100%;
     position: relative;
     display: flex;
+    @media (max-width: $screen1) {
+      flex-direction: column;
+      align-items: center;
+    }
     justify-content: space-between;
     &-background {
       background-color: $divFiller;
       border-radius: 40px;
       width: 100%;
       max-height: 422px;
+      @media (max-width: $screen1) {
+        max-height: none;
+      }
       height: 100%;
       position: absolute;
       z-index: -1;
@@ -1388,7 +1883,10 @@ $screen2: 360px;
     &-textbox {
       width: 50%;
       padding: 60px 0 60px 100px;
-
+      @media (max-width: $screen1) {
+        width: 100%;
+        padding: 60px 60px 60px 50px;
+      }
       h1 {
         font-size: 40px;
         line-height: 48px;
@@ -1414,10 +1912,24 @@ $screen2: 360px;
           color: $mainBkgColor;
         }
       }
+      @media (max-width: $screen3) {
+        h1 {
+          font-size: 24px;
+          line-height: 34px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
     }
     &-form {
       width: 50%;
       margin: 60px 100px 60px 0;
+      @media (max-width: $screen1) {
+        width: 100%;
+        margin: 0 50px 50px;
+      }
       max-width: 420px;
       .form__wrapper {
         display: flex;
@@ -1513,12 +2025,14 @@ $screen2: 360px;
   &__content {
     display: flex;
     flex-direction: column;
-    padding-top: 58px;
-    padding-bottom: 58px;
+    padding-bottom: 35px;
     .top-part {
       display: flex;
       width: 100%;
       margin-bottom: 58px;
+      @media (max-width: $screen1) {
+        flex-wrap: wrap;
+      }
     }
     .bottom-part {
       display: flex;
@@ -1533,6 +2047,7 @@ $screen2: 360px;
     &-list {
       display: flex;
       flex-direction: column;
+      margin-top: 58px;
       span {
         margin-bottom: 32px;
         text-transform: uppercase;
@@ -1558,6 +2073,10 @@ $screen2: 360px;
     &-vacancies {
       max-width: 500px;
       margin-left: auto;
+      margin-top: 58px;
+      @media (max-width: $screen1) {
+        margin-left: 0;
+      }
       span {
         text-transform: uppercase;
         color: $subtextColor;
@@ -1587,12 +2106,26 @@ $screen2: 360px;
       align-items: center;
       justify-content: space-between;
       position: relative;
+      @media (max-width: $screen3) {
+        flex-wrap: wrap;
+        margin-top: 0;
+        span {
+          margin-top: 35px;
+        }
+      }
       span {
         font-weight: 400;
         font-size: 14px;
         color: $subtextColor;
+        @media (max-width: $screen1) {
+          max-width: 274px;
+          font-size: 12px;
+        }
       };
       img {
+        @media (max-width: $screen2) {
+          display: none;
+        }
         position: absolute;
         height: 34px;
         width: 172px;

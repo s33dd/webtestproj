@@ -5,7 +5,7 @@ $(document).ready(function () {
         for (let i = 0; i < buttons.length; i++){
             $(buttons[i]).removeClass('active');
             $(infos[i]).removeClass('active');
-            if (this.innerHTML == buttons[i].innerHTML) {
+            if (this.innerHTML === buttons[i].innerHTML) {
                 let clicked = i;
                 $(buttons[clicked]).addClass('active');
                 $(infos[clicked]).addClass('active');
@@ -17,7 +17,7 @@ $(document).ready(function () {
         let steps = $('.step');
         let clicked = 0;
         for (let i = 0; i < steps.length; i++){
-            if (this == steps[i]) {
+            if (this === steps[i]) {
                 clicked = i;
             }
         }
@@ -35,7 +35,7 @@ $(document).ready(function () {
         let questions = $('.question');
         let clicked = 0;
         for (let i = 0; i < questions.length; i++) {
-            if (this == questions[i]){
+            if (this === questions[i]){
                 clicked = i;
             }
         }

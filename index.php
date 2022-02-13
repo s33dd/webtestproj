@@ -100,18 +100,20 @@
                     <a href="tel:+78005553535">8 (800) 555-35-35</a>
                 </div>
             </nav>
-            <nav class="menu__mobile">
-                <div class="menu__mobile-control container">
-                    <a class="logo" href="#">
-                        <img src="source/icons/logo.svg">
-                    </a>
-                    <div class="menu__burger">
-                        <div class="burger">
-                            <span></span>
-                        </div>
+        </div>
+        <div class="menu__mobile">
+            <div class="menu__mobile-control container">
+                <a class="logo" href="#">
+                    <img src="source/icons/logo.svg">
+                </a>
+                <div class="menu__burger">
+                    <div class="burger">
+                        <span></span>
                     </div>
                 </div>
-                <div class="menu__mobile-links">
+            </div>
+            <div class="menu__mobile-links">
+                <div class="links-wrapper container">
                     <a class="menu__link">Главная</a>
                     <div class="menu__dropdown">
                         <span class="menu__link dropdown-toggler">
@@ -181,8 +183,24 @@
                     <a class="menu__link">Блог</a>
                     <a class="menu__link">О нас</a>
                     <a class="menu__link">Контакты</a>
+                    <div class="menu__contact menu__contact_number">
+                        <i class="icon-phone header__icon"></i>
+                        <a href="tel:+78005553535">8 (800) 555-35-35</a>
+                    </div>
+                    <div class="menu__contact">
+                        <i class="header__icon icon-mail"></i>
+                        <span>companymail@company.com</span>
+                    </div>
+                    <div class="menu__contact">
+                        <i class="header__icon icon-address"></i>
+                        <span>Москва, Бумажная улица, д.19</span>
+                    </div>
+                    <div class="menu__contact">
+                        <i class="header__icon icon-clock"></i>
+                        <span>Пн-Пт 9:00 - 18:00</span>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
         <div class="info container">
             <div class="banner">
@@ -196,6 +214,9 @@
                         <button>
                             Услуги и цены
                         </button>
+                    </div>
+                    <div>
+                        <img class="banner__image_single" src="./source/img/dotchart.png">
                     </div>
                 </div>
             </div>
@@ -217,12 +238,14 @@
                 <h2>
                     <b>Более 20 лет</b> мы успешно оказываем полный спектр услуг по бухгалтерскому учету предприятиям и индивидуальным предпринимателям
                 </h2>
-                <div class="company-info__switcher">
-                    <button class="company-info__button active">Комплексный учет</button>
-                    <button class="company-info__button">Отчетность</button>
-                    <button class="company-info__button">Программа и консультация</button>
-                    <button class="company-info__button">Расчет заработной платы</button>
-                    <button class="company-info__button">Кадровый учет</button>
+                <div class="switcher-wrapper">
+                    <div class="company-info__switcher">
+                        <button class="company-info__button active">Комплексный учет</button>
+                        <button class="company-info__button">Отчетность</button>
+                        <button class="company-info__button">Программа и консультация</button>
+                        <button class="company-info__button">Расчет заработной платы</button>
+                        <button class="company-info__button">Кадровый учет</button>
+                    </div>
                 </div>
                 <div class="company-info__contentbox">
                     <div class="company-info__textbox active">
@@ -398,34 +421,38 @@
                         </div>
                         <div class="service__content-details-slider-nav">
                             <div class="pagination"></div>
-                            <button class="prevElement">
-                                <i class="icon-arrow-left icon"></i>
-                            </button>
-                            <button class="nextElement">
-                                <i class="icon-arrow-right icon"></i>
-                            </button>
+                            <div class="slider__buttonbox">
+                                <button class="prevElement">
+                                    <i class="icon-arrow-left icon"></i>
+                                </button>
+                                <button class="nextElement">
+                                    <i class="icon-arrow-right icon"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="service__content-details photo-slider swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="photo-slide" src="source/img/slide1.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="photo-slide" src="source/img/slide2.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="photo-slide" src="source/img/slide3.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="photo-slide" src="source/img/slide2.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="photo-slide" src="source/img/slide1.png">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="photo-slide" src="source/img/slide3.png">
+                <div class="photo-slider-box">
+                    <div class="swiper photo-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="photo-slide" src="source/img/slide1.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="photo-slide" src="source/img/slide2.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="photo-slide" src="source/img/slide3.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="photo-slide" src="source/img/slide2.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="photo-slide" src="source/img/slide1.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="photo-slide" src="source/img/slide3.png">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -580,25 +607,6 @@
                             <div class="ruler">
                                 <input class="calc_range" type="range" min="0" max="100" step="1" value="0">
                             </div>
-                            <div class="ticks">
-                                <div class="start">
-                                    <span class="large">0</span>
-                                </div>
-                                <div class="main">
-                                    <span class="tick"></span>
-                                    <span>20</span>
-                                    <span class="tick"></span>
-                                    <span>40</span>
-                                    <span class="tick"></span>
-                                    <span>60</span>
-                                    <span class="tick"></span>
-                                    <span>80</span>
-                                    <span class="tick"></span>
-                                </div>
-                                <div class="end">
-                                    <span class="large">100</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="sum">
@@ -742,8 +750,74 @@
                             </div>
                         </div>
                     </div>
+                    <div class="reviewbox-pagination"></div>
                 </div>
-                <div class="reviewbox-pagination"></div>
+                <div class="reviews__content-reviewbox_mobile swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="body__wrapper">
+                                    <div class="review__body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco
+                                        </p>
+                                    </div>
+                                    <div class="review__bottom">
+                                        <div class="review__bottom-img"></div>
+                                        <div class="review__bottom-text">
+                                            <span class="name">Мушон Илона</span>
+                                            <span class="company">Компания «L'Oréal»</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="body__wrapper">
+                                    <div class="review__body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco
+                                        </p>
+                                    </div>
+                                    <div class="review__bottom">
+                                        <div class="review__bottom-img"></div>
+                                        <div class="review__bottom-text">
+                                            <span class="name">Мушон Илона</span>
+                                            <span class="company">Компания «L'Oréal»</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="body__wrapper">
+                                    <div class="review__body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco
+                                        </p>
+                                    </div>
+                                    <div class="review__bottom">
+                                        <div class="review__bottom-img"></div>
+                                        <div class="review__bottom-text">
+                                            <span class="name">Мушон Илона</span>
+                                            <span class="company">Компания «L'Oréal»</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviewbox-pagination reviewbox-pagination_mobile"></div>
+                </div>
+
             </div>
         </div>
         <div class="certificates container">
@@ -752,10 +826,18 @@
                 <h1>Lorem ipsum dolor</h1>
                 <div class="certificates__box">
                     <div class="certificates__box-images">
-                        <img src="./source/img/cert.png">
-                        <img src="./source/img/cert.png">
-                        <img src="./source/img/cert.png">
-                        <img src="./source/img/cert.png">
+                        <div>
+                            <img src="./source/img/cert.png">
+                        </div>
+                        <div>
+                            <img src="./source/img/cert.png">
+                        </div>
+                        <div>
+                            <img src="./source/img/cert.png">
+                        </div>
+                        <div>
+                            <img src="./source/img/cert.png">
+                        </div>
                     </div>
                     <div class="background"></div>
                 </div>

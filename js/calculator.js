@@ -118,4 +118,21 @@ $(document).ready( function () {
 
         answerField.html('от ' + answer);
     });
+
+    //Декоративные изменения
+    let ltd = $('.ltd');
+    let individual = $('.individual');
+    const screen = window.matchMedia('(max-width:760px)');
+    function ChangeBtns() {
+        if (screen.matches === true) {
+            ltd.html('ООО');
+            individual.html('ИП');
+        }
+        else {
+            ltd.html('Юридическое лицо (ООО)');
+            individual.html('Индивидуальный предприниматель (ИП)');
+        }
+    }
+    screen.addListener(ChangeBtns);
+    ChangeBtns();
 });
