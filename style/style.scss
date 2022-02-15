@@ -2017,6 +2017,439 @@ $screen3: 360px;
   }
 }
 
+.about-company {
+  font-family: $standardFont;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  &__content {
+    width: 100%;
+  }
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 68px;
+      margin-bottom: 20px;
+      color: $mainFontColor;
+    }
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 400;
+      max-width: 595px;
+      margin-bottom: 60px;
+      color: $subtextColor;
+    }
+    @media (max-width: $screen2) {
+      h1 {
+        font-size: 35px;
+        line-height: 47px;
+      }
+      p {
+        max-width: 292px;
+      }
+    }
+  }
+  &__slider {
+    .photo-slide {
+      border-radius: 20px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-slide {
+      &::after{
+        content: '';
+        display: block;
+        padding-bottom: 75%;
+      }
+    }
+    &-nav {
+      display: flex;
+      margin-top: 24px;
+      align-items: center;
+      justify-content: flex-end;
+      .pagination {
+        margin-left: auto;
+        margin-right: auto;
+        @extend %pagination-style;
+      }
+      &-buttonbox {
+        display: flex;
+        justify-content: space-between;
+        width: 132px;
+        button {
+          background-color: $mainBkgColor;
+          height: 56px;
+          width: 56px;
+          @include border(1px, solid, $borderColor, 50%);
+          &:hover {
+            background-color: $buttonHighlight;
+          }
+        }
+        .icon {
+          @include icon($highlightColor, 0, 16px, none);
+        }
+      }
+    }
+  }
+}
+
+.offer {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &-top {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        @extend %span-style;
+      }
+      h1 {
+        font-size: 35px;
+        line-height: 48px;
+        color: $mainFontColor;
+        font-weight: 600;
+        max-width: 477px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $subtextColor;
+        max-width: 500px;
+        margin-bottom: 63px;
+      }
+    }
+    &-bottom {
+      background-color: $divFiller;
+      border-radius: 40px;
+      max-width: 1024px;
+      width: 100%;
+      padding: 40px 60px;
+      @media (max-width: $screen3) {
+        padding: 18px;
+      }
+    }
+    &_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 32px;
+      height: 100%;
+      @media (max-width: $screen1) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: $screen2) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      .cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: $mainBkgColor;
+        border-radius: 25px;
+        max-width: 280px;
+        max-height: 196px;
+        width: 100%;
+        height: 100%;
+        padding: 20px 28px;
+        &.blue {
+          .cell__iconbox {
+            background-color: rgba(12, 125, 255, 0.1);
+          }
+          color: rgb(12, 125, 255);
+        }
+        &.lightblue {
+          .cell__iconbox {
+            background-color: rgba(4, 210, 252, 0.1);
+          }
+          color: rgb(4, 210, 252);
+        }
+        &.orange {
+          .cell__iconbox {
+            background-color: rgba(255, 160, 92, 0.1);
+          }
+          color: rgb(255, 160, 92);
+        }
+        &.green {
+          .cell__iconbox {
+            background-color: rgba(71, 211, 155, 0.1);
+          }
+          color: rgb(71, 211, 155);
+        }
+        &.red {
+          .cell__iconbox {
+            background-color: rgba(245, 129, 140, 0.1);
+          }
+          color: rgb(245, 129, 140);
+        }
+        &.purple {
+          .cell__iconbox {
+            background-color: rgba(111, 60, 255, 0.1);
+          }
+          color: rgb(111, 60, 255);
+        }
+        span {
+          margin-top: 20px;
+          color: $mainFontColor;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 28px;
+          max-width: 240px;
+        }
+        &:hover {
+          span {
+            color: inherit;
+          }
+        }
+        &__iconbox {
+          height: 64px;
+          width: 64px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .icon {
+            @include icon(inherit, 0, 20px, middle);
+          }
+        }
+      }
+    }
+  }
+}
+
+.one-s {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $divFiller;
+    border-radius: 40px;
+    padding: 50px 80px 50px 60px;
+    @media (max-width: $screen1) {
+      flex-direction: row-reverse;
+      padding: 40px;
+    }
+    @media (max-width: $screen2) {
+      flex-direction: column-reverse;
+    }
+    &-imagebox {
+      img {
+        max-width: 350px;
+        max-height: 300px;
+      }
+    }
+    &-textbox {
+      max-width: 624px;
+      span {
+        @extend %span-style;
+      }
+      h1 {
+        font-size: 35px;
+        font-weight: 600;
+        color: $mainFontColor;
+        line-height: 48px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        color: $subtextColor;
+        margin-bottom: 40px;
+        max-width: 500px;
+      }
+      button {
+        @extend %button;
+        width: 260px;
+        height: 58px;
+        &:hover {
+          background-color: $highlightColor;
+          color: $mainBkgColor;
+        }
+        @media (max-width: $screen2) {
+          width: 100%;
+        }
+      }
+      @media (max-width: $screen1) {
+        max-width: 350px;
+        h1 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 14px;
+          max-width: 350px;
+        }
+      }
+      @media (max-width: $screen3) {
+        max-width: 270px;
+      }
+    }
+  }
+}
+
+.crew {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &-textbox {
+      span {
+        @extend %span-style;
+      }
+      h1 {
+        font-size: 35px;
+        font-weight: 600;
+        color: $mainFontColor;
+        line-height: 48px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        color: $subtextColor;
+        margin-bottom: 60px;
+        max-width: 500px;
+      }
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: $screen1) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: $screen2) {
+      grid-template-columns: 1fr;
+    }
+    grid-gap: 60px;
+    .cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 410px;
+      max-height: 518px;
+      padding: 40px 40px 50px;
+      @media (max-width: $screen1) {
+        max-width: 370px;
+        max-height: 475px;
+        padding: 28px 28px 40px;
+      }
+      @media (max-width: $screen3) {
+        max-width: 312px;
+        max-height: 397px;
+        padding: 20px;
+      }
+      @include border(2px, solid, $borderColor, 30px);
+      &:hover {
+        cursor: pointer;
+        border-color: $highlightColor;
+      }
+      &__imagebox {
+        img {
+          border-radius: 20px;
+          max-width: 330px;
+          max-height: 330px;
+          @media (max-width: $screen1) {
+            max-width: 314px;
+            max-height: 314px;
+          }
+          @media (max-width: $screen3) {
+            max-width: 272px;
+            max-height: 272px;
+          }
+        }
+        margin-bottom: 30px;
+      }
+      .name {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 8px;
+        color: $mainFontColor;
+      }
+      .position {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        color: $subtextColor;
+      }
+    }
+  }
+}
+
+.job {
+  font-family: $standardFont;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $divFiller;
+  padding: 50px 150px;
+  max-width: 60%;
+  border-radius: 40px;
+  span {
+    @extend %span-style;
+  }
+  h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: $mainFontColor;
+    line-height: 48px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  p {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+      color: $subtextColor;
+      margin-bottom: 40px;
+      max-width: 500px;
+  }
+  a {
+    font-size: 18px;
+    color: $mainBkgColor;
+    font-weight: 600;
+    background-color: $highlightColor;
+    padding: 18px 32px;
+    @include border(1px, solid, transparent, 8px);
+    &:hover {
+      background-color: $mainBkgColor;
+      color: $highlightColor;
+      border-color: $borderColor;
+    }
+  }
+}
+
 .footer   {
   background-color: $divFiller;
   font-family: $standardFont;

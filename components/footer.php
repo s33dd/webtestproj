@@ -12,7 +12,7 @@
       </div>
       <div class="footer__content-list footer__content-company">
         <span>Компания</span>
-        <a href="#">О нас</a>
+        <a href="about_us.php">О нас</a>
         <a href="#">Тарифы</a>
         <a href="#">Блог</a>
         <a href="#">Контакты</a>

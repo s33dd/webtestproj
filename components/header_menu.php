@@ -16,7 +16,7 @@
 </header>
 <div class="menu">
     <nav class="menu__navigation container">
-        <a class="menu__link logo" href="#">
+        <a class="menu__link logo" href="index.php">
             <img src="source/icons/logo.svg">
         </a>
         <div class="menu__navigation-links">
@@ -87,7 +87,7 @@
             </div>
             <a class="menu__link">Тарифы</a>
             <a class="menu__link">Блог</a>
-            <a class="menu__link">О нас</a>
+            <a class="menu__link" href="about_us.php">О нас</a>
             <a class="menu__link">Контакты</a>
         </div>
         <div class="menu__navigation-number">
@@ -98,7 +98,7 @@
 </div>
 <div class="menu__mobile">
     <div class="menu__mobile-control container">
-        <a class="logo" href="#">
+        <a class="logo" href="index.php">
             <img src="source/icons/logo.svg">
         </a>
         <div class="menu__burger">
@@ -109,7 +109,7 @@
     </div>
     <div class="menu__mobile-links">
         <div class="links-wrapper container">
-            <a class="menu__link">Главная</a>
+            <a class="menu__link" href="index.php">Главная</a>
             <div class="menu__dropdown">
                         <span class="menu__link dropdown-toggler">
                             Услуги
@@ -176,7 +176,7 @@
             </div>
             <a class="menu__link">Тарифы</a>
             <a class="menu__link">Блог</a>
-            <a class="menu__link">О нас</a>
+            <a class="menu__link" href="about_us.php">О нас</a>
             <a class="menu__link">Контакты</a>
             <div class="menu__contact menu__contact_number">
                 <i class="icon-phone header__icon"></i>

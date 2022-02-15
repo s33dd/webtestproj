@@ -824,6 +824,6 @@
         </div>
         <? require_once (__DIR__.'/components/footer.php') ?>
     </div>
-    <? require_once (__DIR__.'/components/scripts.php')?>
+    <? require_once (__DIR__ . '/components/scripts_main.php')?>
 </body>
 </html>
